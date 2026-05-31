@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poems & Verse | Gunajit Kalita | Assamese Poet</title>
+<meta name="description" content="Read Gunajit Kalita's original Assamese poems and verse. Poetry rooted in Assam — about struggle, love, nature, and the human soul.">
+<meta name="keywords" content="Gunajit Kalita poems, Assamese poetry, Assam poet, gunajit.0, Assamese verse">
+<meta name="author" content="Gunajit Kalita">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Mono:wght@300;400;500&family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ── POEMS PAGE ────────────────────────────────── */
+
+/* Filter bar */
+.filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:48px;}
+.filter-btn{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:8px 18px;border-radius:2px;border:1px solid var(--border);color:var(--txt3);background:transparent;cursor:pointer;transition:all .2s;}
+.filter-btn:hover,.filter-btn.active{background:var(--acc3);border-color:rgba(201,168,76,.4);color:var(--acc);}
+
+/* Hero poem – big featured verse */
+.poem-hero{background:linear-gradient(135deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:var(--rxl);padding:64px;position:relative;overflow:hidden;margin-bottom:56px;box-shadow:var(--shg);}
+.poem-hero::before{content:'\201C';position:absolute;top:-30px;left:28px;font-family:'Playfair Display',serif;font-size:260px;color:rgba(201,168,76,.05);line-height:1;pointer-events:none;}
+.poem-hero::after{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--acc),var(--teal),transparent);}
+.poem-hero-badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--acc);border:1px solid rgba(201,168,76,.3);padding:5px 12px;border-radius:2px;display:inline-block;margin-bottom:24px;background:rgba(201,168,76,.06);}
+.poem-hero-title{font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,44px);font-weight:900;line-height:1.1;letter-spacing:-1.5px;margin-bottom:32px;color:var(--txt);}
+.poem-hero-title em{color:var(--acc);font-style:italic;}
+.poem-hero-body{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;font-style:italic;line-height:2.2;color:var(--txt2);margin-bottom:32px;max-width:640px;}
+.poem-hero-body strong{color:var(--txt);font-style:normal;}
+.poem-hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
+.poem-hero-attr{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt3);}
+.poem-hero-attr em{color:var(--acc);font-style:normal;}
+.poem-hero-tags{display:flex;gap:8px;}
+.ptag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:2px;border:1px solid var(--border2);color:var(--txt3);background:transparent;}
+
+/* Poems grid */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;}
+
+.pcard{background:var(--card);border:1px solid var(--border2);border-radius:var(--rl);overflow:hidden;transition:all .3s;position:relative;}
+.pcard:hover{border-color:var(--border);box-shadow:0 20px 56px rgba(0,0,0,.5),0 0 0 1px rgba(201,168,76,.08);transform:translateY(-5px);}
+.pcard-accent{height:2px;width:100%;}
+.pa-gold{background:linear-gradient(90deg,transparent,var(--acc),transparent);}
+.pa-teal{background:linear-gradient(90deg,transparent,var(--teal),transparent);}
+.pa-red{background:linear-gradient(90deg,transparent,var(--red),transparent);}
+.pcard-body{padding:28px;}
+.pcard-cat{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:14px;display:inline-flex;align-items:center;gap:8px;}
+.pcc-love{color:#e8897a;}.pcc-nature{color:#6dbfb0;}.pcc-life{color:var(--acc);}.pcc-social{color:#a78bfa;}
+.pcc-love::before{content:'';width:12px;height:1px;background:#e8897a;}
+.pcc-nature::before{content:'';width:12px;height:1px;background:#6dbfb0;}
+.pcc-life::before{content:'';width:12px;height:1px;background:var(--acc);}
+.pcc-social::before{content:'';width:12px;height:1px;background:#a78bfa;}
+.pcard-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;line-height:1.2;margin-bottom:16px;color:var(--txt);}
+.pcard-title em{font-style:italic;color:var(--acc);}
+.pcard-verse{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;line-height:2.0;color:var(--txt2);margin-bottom:20px;}
+.pcard-verse strong{color:var(--txt);font-style:normal;}
+.pcard-footer{display:flex;align-items:center;justify-content:space-between;}
+.pcard-attr{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--txt3);}
+.pcard-link{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--acc);text-decoration:none;display:inline-flex;align-items:center;gap:5px;transition:gap .2s;}
+.pcard:hover .pcard-link{gap:9px;}
+.pcard-deco{position:absolute;bottom:16px;right:20px;font-size:52px;opacity:.04;pointer-events:none;}
+
+/* Wide featured card */
+.pcard-wide{grid-column:span 2;background:linear-gradient(135deg,var(--card),var(--card2));border-color:var(--border);}
+@media(max-width:760px){.pcard-wide{grid-column:span 1;}}
+
+/* Assamese quote wall */
+.quote-wall{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+@media(max-width:860px){.quote-wall{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.quote-wall{grid-template-columns:1fr;}}
+.qwall-card{background:var(--card);border:1px solid var(--border2);border-radius:var(--rl);padding:24px;transition:all .3s;text-align:center;}
+.qwall-card:hover{border-color:var(--border);box-shadow:var(--shg);transform:translateY(-3px);}
+.qwall-assamese{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:var(--txt2);line-height:1.8;margin-bottom:12px;}
+.qwall-english{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt3);line-height:1.6;}
+.qwall-line{width:24px;height:1px;background:var(--acc);margin:12px auto 0;}
+
+/* About poetry section */
+.poetry-about{display:grid;grid-template-columns:1fr 380px;gap:64px;align-items:center;}
+@media(max-width:880px){.poetry-about{grid-template-columns:1fr;}}
+.poetry-about-body p{font-family:'Spectral',serif;font-size:16px;color:var(--txt2);line-height:1.9;margin-bottom:18px;}
+.poetry-about-body strong{color:var(--txt);}
+.poetry-about-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rl);padding:36px;box-shadow:var(--shg);position:relative;overflow:hidden;}
+.poetry-about-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--acc),var(--teal),transparent);}
+.pac-num{font-family:'Playfair Display',serif;font-size:64px;font-weight:900;color:var(--acc);line-height:1;}
+.pac-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--txt3);margin-bottom:28px;display:block;}
+.pac-divider{height:1px;background:var(--border2);margin:20px 0;}
+
+/* CTA */
+.ctabox{background:linear-gradient(135deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:var(--rxl);padding:72px;text-align:center;position:relative;overflow:hidden;}
+.ctabox::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(201,168,76,.08),transparent);pointer-events:none;}
+.ctabox *{position:relative;z-index:1;}
+.ctabox h2{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,46px);font-weight:900;line-height:1.15;margin-bottom:14px;}
+.ctabox h2 em{color:var(--acc);font-style:italic;}
+.ctabox p{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;color:var(--txt2);max-width:460px;margin:0 auto 40px;line-height:1.8;}
+.ctabtns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+@media(max-width:768px){
+  .poem-hero{padding:36px 28px;}
+  .ctabox{padding:40px 24px;}
+}
+</style>
+</head>
+<body>
+<div class="ink ink1"></div>
+<div class="ink ink2"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-in">
+    <a href="index.html" class="logo">Gunajit<em>.kalita</em></a>
+    <ul class="nav-ul">
+      <li><a href="about.html">About</a></li>
+      <li><a href="songs.html">Songs</a></li>
+      <li><a href="poems.html" class="on">Poems</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://www.instagram.com/gunajit.0/" target="_blank" rel="noopener" class="nav-cta">Instagram ↗</a></li>
+    </ul>
+    <button class="mbtn" onclick="toggleMenu()" aria-label="Menu">☰</button>
+  </div>
+</nav>
+<div class="mmenu" id="mmenu">
+  <a href="index.html" onclick="toggleMenu()">Home</a>
+  <a href="about.html" onclick="toggleMenu()">About</a>
+  <a href="songs.html" onclick="toggleMenu()">Songs</a>
+  <a href="poems.html" onclick="toggleMenu()">Poems</a>
+  <a href="contact.html" onclick="toggleMenu()">Contact</a>
+  <a href="https://www.instagram.com/gunajit.0/" target="_blank" rel="noopener" onclick="toggleMenu()" style="color:var(--acc);">Instagram ↗</a>
+  <a href="https://www.youtube.com/@gunajitkalita6667/videos" target="_blank" rel="noopener" onclick="toggleMenu()">YouTube ↗</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-in">
+    <p class="breadcrumb"><a href="index.html">Home</a> → Poems</p>
+    <span class="lbl">Poetry</span>
+    <h1 class="page-h1">Words Written for<br><em>the Listening Soul</em></h1>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:300;font-style:italic;color:var(--txt2);max-width:600px;margin-top:16px;line-height:1.75;">Gunajit Kalita's original Assamese poetry — verse about love, struggle, nature and the long conversation between a man and his language.</p>
+  </div>
+</div>
+
+<!-- FEATURED POEM -->
+<section class="sec">
+  <div class="sec-in">
+    <span class="lbl">Featured Poem</span>
+    <div class="poem-hero fu">
+      <span class="poem-hero-badge">Featured · Original Assamese Verse</span>
+      <h2 class="poem-hero-title">সংগ্রামৰ আন এটি নাম —<br><em>Another Name for Struggle</em></h2>
+      <p class="poem-hero-body">
+        সংগ্রামৰ আন এটি নাম জীৱন,<br>
+        <strong>প্ৰতিটো ৰাতিপুৱা এটি নতুন যুদ্ধ।</strong><br>
+        কিন্তু তোমাৰ হাঁহিয়ে মোক কয় —<br>
+        <strong>এই যুদ্ধতে আছে জীৱনৰ বুদ্ধ।</strong>
+      </p>
+      <div class="poem-hero-meta">
+        <span class="poem-hero-attr">— <em>Gunajit Kalita</em> · Philosophy & Life</span>
+        <div class="poem-hero-tags">
+          <span class="ptag">Assamese</span>
+          <span class="ptag">Life</span>
+          <span class="ptag">Struggle</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divline"></div>
+
+<!-- ASSAMESE QUOTE WALL -->
+<section class="sec" style="background:var(--bg1);">
+  <div class="sec-in">
+    <span class="lbl">Lines to Remember</span>
+    <h2 class="h2" style="margin-bottom:48px;">Fragments from <em>His Verse</em></h2>
+    <div class="quote-wall">
+      <div class="qwall-card fu">
+        <p class="qwall-assamese">সংগ্রামৰ আন এটি নাম জীৱন।</p>
+        <p class="qwall-english">Struggle has another name — that name is life.</p>
+        <div class="qwall-line"></div>
+      </div>
+      <div class="qwall-card fu">
+        <p class="qwall-assamese">আকাশৰ গাত লাগি বোৱা তুমি।</p>
+        <p class="qwall-english">You flow, clinging to the fabric of the sky.</p>
+        <div class="qwall-line"></div>
+      </div>
+      <div class="qwall-card fu">
+        <p class="qwall-assamese">তুমি মেঘ বৰষীয়া চাদৰ।</p>
+        <p class="qwall-english">You are the cloud-drenched sheet of rain.</p>
+        <div class="qwall-line"></div>
+      </div>
+      <div class="qwall-card fu">
+        <p class="qwall-assamese">আকুল হৃদয়ে বিচাৰে তোমাক।</p>
+        <p class="qwall-english">The restless heart searches only for you.</p>
+        <div class="qwall-line"></div>
+      </div>
+      <div class="qwall-card fu">
+        <p class="qwall-assamese">প্ৰতিটো শব্দ এটি প্ৰাৰ্থনা।</p>
+        <p class="qwall-english">Every word is a prayer in disguise.</p>
+        <div class="qwall-line"></div>
+      </div>
+      <div class="qwall-card fu">
+        <p class="qwall-assamese">নিঃশব্দতাতো আছে এটি গান।</p>
+        <p class="qwall-english">Inside silence, there lives a song.</p>
+        <div class="qwall-line"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divline"></div>
+
+<!-- POEMS GRID -->
+<section class="sec">
+  <div class="sec-in">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:32px;">
+      <div>
+        <span class="lbl">All Poems</span>
+        <h2 class="h2" style="margin-bottom:0;">Verse from <em>Assam</em></h2>
+      </div>
+      <a href="https://www.instagram.com/gunajit.0/" target="_blank" rel="noopener" class="btn-ghost" style="white-space:nowrap;">More on Instagram ↗</a>
+    </div>
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterPoems('all',this)">All</button>
+      <button class="filter-btn" onclick="filterPoems('love',this)">Love</button>
+      <button class="filter-btn" onclick="filterPoems('life',this)">Life & Struggle</button>
+      <button class="filter-btn" onclick="filterPoems('nature',this)">Nature</button>
+      <button class="filter-btn" onclick="filterPoems('social',this)">Social</button>
+    </div>
+    <div class="pgrid">
+
+      <!-- Wide featured -->
+      <div class="pcard pcard-wide fu" data-cat="life">
+        <div class="pcard-accent pa-gold"></div>
+        <div class="pcard-body">
+          <span class="pcard-cat pcc-life">Life & Struggle</span>
+          <h3 class="pcard-title">সংগ্রামৰ আন এটি নাম —<br><em>Another Name for Struggle</em></h3>
+          <p class="pcard-verse">
+            সংগ্রামৰ আন এটি নাম জীৱন,<br>
+            <strong>প্ৰতিটো ৰাতিপুৱা এটি নতুন যুদ্ধ।</strong><br>
+            কিন্তু তোমাৰ হাঁহিয়ে মোক কয় —<br>
+            <strong>এই যুদ্ধতে আছে জীৱনৰ বুদ্ধ।</strong>
+          </p>
+          <div class="pcard-footer">
+            <span class="pcard-attr">Gunajit Kalita · Life Philosophy</span>
+            <a href="https://www.instagram.com/gunajit.0/" target="_blank" rel="noopener" class="pcard-link">Read More →</a>
+          </div>
+          <span class="pcard-deco">✊</span>
+        </div>
+      </div>
+
+      <div class="pcard fu" data-cat="love">
+        <div class="pcard-accent pa-red"></div>
+        <div class="pcard-body">
+          <span class="pcard-cat pcc-love">Love</span>
+          <h3 class="pcard-title">তুমি মেঘ বৰষীয়া চাদৰ<br><em>You, the Rain-Soaked Sheet</em></h3>
+          <p class="pcard-verse">
+            তুমি মেঘ বৰষীয়া চাদৰ,<br>
+            মোৰ বুকুত বৰষুণৰ সুৰ।<br>
+            <strong>তোমাক বিচাৰি ফুৰোঁ মই —</strong><br>
+            প্ৰতিটো মেঘৰ আঁৰত, দূৰ দূৰ।
+          </p>
+          <div class="pcard-footer">
+            <span class="pcard-attr">Love Verse · Assamese</span>
+            <a href="https://www.instagram.com/gunajit.0/" target="_blank" rel="noopener" class="pcard-link">Read →</a>
+          </div>
+          <span class="pcard-deco">❤️</span>
+        </div>
+      </div>
+
+      <div class="pcard fu" data-cat="nature">
+        <div class="pcard-accent pa-teal"></div>
+        <div class="pcard-body">
+          <span class="pcard-cat pcc-nature">Nature</span>
+          <h3 class="pcard-title">আকাশৰ গাত লাগি বোৱা<br><em>Flowing, Clinging to the Sky</em></h3>
+          <p class="pcard-verse">
+            আকাশৰ গাত লাগি বোৱা,<br>
+            <strong>মেঘৰ দৰে মুক্ত, অবাধ।</strong><br>
+            নদীৰ গান গাই যাওঁ —<br>
+            ব্ৰহ্মপুত্ৰৰ কোলাত আবাদ।
+          </p>
+          <div class="pcard-footer">
+            <span class="pcard-attr">Nature · Brahmaputra</span>
+            <a href="https://www.instagram.com/gunajit.0/" target="_blank" rel="noopener" class="pcard-link">Read →</a>
+          </div>
+          <span class="pcard-deco">🌊</span>
+        </div>
+      </div>
+
+      <div class="pcard fu" data-cat="life">
+        <div class="pcard-accent pa-gold"></div>
+        <div class="pcard-body">
+          <span class="pcard-cat pcc-life">Life</span>
+          <h3 class="pcard-title">আকুল তা —<br><em>The Restlessness</em></h3>
+          <p class="pcard-verse">
+            আকুল হৃদয়ে বিচাৰে কি,<br>
+            <strong>নিজেই নাজানে উত্তৰ।</strong><br>
+            এই আকুলতাই জীৱনৰ গান —<br>
+            শেষ নোহোৱা এটি স্বৰ।
+          </p>
+          <div class="pcard-footer">
+            <span class="pcard-attr">Introspective · Assamese</span>
+            <a href="https://www.instagram.com/gunajit.0/" target="_blank" rel="noopener" class="pcard-link">Read →</a>
+          </div>
+          <span class="pcard-deco">🌙</span>
+        </div>
+      </div>
+
+      <div class="pcard fu" data-cat="social">
+        <div class="pcard-accent" style="background:linear-gradient(90deg,transparent,#a78bfa,transparent);height:2px;width:100%;"></div>
+        <div class="pcard-body">
+          <span class="pcard-cat pcc-social">Social</span>
+          <h3 class="pcard-title">সমাজৰ কথা —<br><em>A Word for Society</em></h3>
+          <p class="pcard-verse">
+            মানুহৰ বাবে লিখোঁ মই,<br>
+            <strong>শব্দেৰে সেৱা কৰোঁ সমাজক।</strong><br>
+            কলমখনেই মোৰ হাতিয়াৰ —<br>
+            সত্যক দিওঁ সাহস আৰু আজাক।
+          </p>
+          <div class="pcard-footer">
+            <span class="pcard-attr">Social Work · Community</span>
+            <a href="https://www.instagram.com/gunajit.0/" target="_blank" rel="noopener" class="pcard-link">Read →</a>
+          </div>
+          <span class="pcard-deco">✊</span>
+        </div>
+      </div>
+
+      <div class="pcard fu" data-cat="love">
+        <div class="pcard-accent pa-red"></div>
+        <div class="pcard-body">
+          <span class="pcard-cat pcc-love">Love</span>
+          <h3 class="pcard-title">নিঃশব্দ প্ৰেম —<br><em>Silent Love</em></h3>
+          <p class="pcard-verse">
+            শব্দ নোলোৱাকৈ কৈছিলা,<br>
+            <strong>চকুৰেই সকলো বুজাইছিলা।</strong><br>
+            মই বুজিছিলোঁ তোমাৰ ভাষা —<br>
+            নিঃশব্দৰ গভীৰ কথা।
+          </p>
+          <div class="pcard-footer">
+            <span class="pcard-attr">Love · Silent Language</span>
+            <a href="https://www.instagram.com/gunajit.0/" target="_blank" rel="noopener" class="pcard-link">Read →</a>
+          </div>
+          <span class="pcard-deco">🤫</span>
+        </div>
+      </div>
+
+      <div class="pcard fu" data-cat="nature">
+        <div class="pcard-accent pa-teal"></div>
+        <div class="pcard-body">
+          <span class="pcard-cat pcc-nature">Nature</span>
+          <h3 class="pcard-title">বৰষুণৰ গান —<br><em>Song of the Rain</em></h3>
+          <p class="pcard-verse">
+            বৰষুণ পৰিলে মনত হয়,<br>
+            <strong>তুমি আহিবা বুলি আশা।</strong><br>
+            ভিজা মাটিৰ গন্ধ লৈ —<br>
+            পুনৰ বাহিৰ হব ভালপোৱা।
+          </p>
+          <div class="pcard-footer">
+            <span class="pcard-attr">Monsoon · Assam Rain</span>
+            <a href="https://www.instagram.com/gunajit.0/" target="_blank" rel="noopener" class="pcard-link">Read →</a>
+          </div>
+          <span class="pcard-deco">🌧️</span>
+        </div>
+      </div>
+
+      <div class="pcard fu" data-cat="life">
+        <div class="pcard-accent pa-gold"></div>
+        <div class="pcard-body">
+          <span class="pcard-cat pcc-life">Life</span>
+          <h3 class="pcard-title">প্ৰতিটো শব্দ প্ৰাৰ্থনা —<br><em>Every Word a Prayer</em></h3>
+          <p class="pcard-verse">
+            লিখোঁতে ভাবোঁ মই —<br>
+            <strong>প্ৰতিটো শব্দ এটি প্ৰাৰ্থনা।</strong><br>
+            কাগজত ৰাখি থওঁ আশা,<br>
+            পাঠকৰ বাবে এটি যাত্ৰা।
+          </p>
+          <div class="pcard-footer">
+            <span class="pcard-attr">Writing · Devotion</span>
+            <a href="https://www.instagram.com/gunajit.0/" target="_blank" rel="noopener" class="pcard-link">Read →</a>
+          </div>
+          <span class="pcard-deco">🙏</span>
+        </div>
+      </div>
+
+    </div><!-- /pgrid -->
+  </div>
+</section>
+
+<div class="divline"></div>
+
+<!-- ABOUT POETRY SECTION -->
+<section class="sec" style="background:var(--bg1);">
+  <div class="sec-in">
+    <div class="poetry-about">
+      <div class="poetry-about-body">
+        <span class="lbl">On Writing Poetry</span>
+        <h2 class="h2">Why Gunajit<br><em>Writes in Assamese</em></h2>
+        <p>For Gunajit, writing in Assamese is not a choice — it is a <strong>necessity</strong>. The Assamese language carries centuries of philosophical and poetic tradition. Words like <em>আকুল</em> (restless longing) and <em>সংগ্রাম</em> (struggle) have textures in Assamese that no translation can fully carry.</p>
+        <p>His poetry draws from the <strong>Brahmaputra's currents</strong>, from Bihu's rhythm, from the smell of rain on red Assamese soil. These are not decorative references — they are the primary material of thought for a poet who has never needed to look elsewhere for beauty or meaning.</p>
+        <p>"I write in Assamese because the most honest things I know can only be said in Assamese. Every other language is a translation of the original feeling — and translations always lose something."</p>
+        <div style="margin-top:28px;">
+          <a href="contact.html" class="btn-ghost">Collaborate on Poetry →</a>
+        </div>
+      </div>
+      <div class="poetry-about-card fscale">
+        <div class="pac-num">50+</div>
+        <span class="pac-label">Original Poems & Lyrics</span>
+        <div class="pac-divider"></div>
+        <div class="pac-num" style="font-size:40px;">5+</div>
+        <span class="pac-label">Years of Writing</span>
+        <div class="pac-divider"></div>
+        <div class="pac-num" style="font-size:40px;">1</div>
+        <span class="pac-label">Language — Assamese</span>
+        <div class="pac-divider"></div>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:var(--txt2);line-height:1.75;margin-top:12px;">"Inside silence, there lives a song."<br><span style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--txt3);">— Gunajit Kalita</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divline"></div>
+
+<!-- CTA -->
+<section class="sec">
+  <div class="sec-in">
+    <div class="ctabox fscale">
+      <span class="lbl" style="justify-content:center;margin-bottom:20px;">More Verse</span>
+      <h2>Read More of<br><em>Gunajit's Work</em></h2>
+      <p>Follow on Instagram for daily poems, lyric fragments, and the unfiltered thoughts of a working Assamese poet.</p>
+      <div class="ctabtns">
+        <a href="https://www.instagram.com/gunajit.0/" target="_blank" rel="noopener" class="btn-gold">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          Follow on Instagram
+        </a>
+        <a href="songs.html" class="btn-ghost">Explore Songs →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="finr">
+    <div class="flogo">Gunajit<em> Kalita</em></div>
+    <p class="ftag">Lyricist · Poet · Composer · Assam, India</p>
+    <div class="flinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="songs.html">Songs</a>
+      <a href="poems.html">Poems</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.instagram.com/gunajit.0/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.youtube.com/@gunajitkalita6667/videos" target="_blank" rel="noopener">YouTube</a>
+    </div>
+    <p class="fcopy">© 2025 Gunajit Kalita · Assamese Lyricist &amp; Poet · সংগ্রামৰ আন এটি নাম জীৱন</p>
+  </div>
+</footer>
+
+<script>
+const NAV = document.getElementById('nav');
+window.addEventListener('scroll', () => NAV.classList.toggle('scrolled', scrollY > 40), {passive:true});
+const obs = new IntersectionObserver(entries => {
+  entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('in'), i * 90); obs.unobserve(e.target); } });
+}, {threshold: .08});
+document.querySelectorAll('.fu,.fl,.fr,.fscale').forEach(el => obs.observe(el));
+function toggleMenu() { document.getElementById('mmenu').classList.toggle('on'); }
+function filterPoems(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.pcard').forEach(c => {
+    c.style.display = (cat === 'all' || c.dataset.cat === cat) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>
