@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Songs & Lyrics | Gunajit Kalita | Assamese Songwriter</title>
+<meta name="description" content="Explore Gunajit Kalita's songs, lyrics and musical compositions. Assamese language songs with deep lyrical roots — on YouTube and Instagram.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Mono:wght@300;400;500&family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* SONGS PAGE */
+.filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:48px;}
+.filter-btn{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:8px 18px;border-radius:2px;border:1px solid var(--border);color:var(--txt3);background:transparent;cursor:pointer;transition:all .2s;}
+.filter-btn:hover,.filter-btn.active{background:var(--acc3);border-color:rgba(201,168,76,.4);color:var(--acc);}
+
+/* FEATURED SONG */
+.feat-song{background:linear-gradient(135deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:var(--rxl);padding:52px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:56px;position:relative;overflow:hidden;box-shadow:var(--shg);}
+.feat-song::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--acc),var(--teal),transparent);}
+.feat-song::after{content:'';position:absolute;bottom:-80px;right:-80px;width:280px;height:280px;background:radial-gradient(circle,rgba(201,168,76,.08),transparent);pointer-events:none;}
+.feat-badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--acc);border:1px solid rgba(201,168,76,.3);padding:5px 12px;border-radius:2px;display:inline-block;margin-bottom:20px;background:rgba(201,168,76,.06);}
+.feat-title{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,48px);font-weight:900;line-height:1.1;letter-spacing:-1px;margin-bottom:16px;}
+.feat-title em{color:var(--acc);font-style:italic;}
+.feat-desc{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;font-style:italic;color:var(--txt2);line-height:1.75;margin-bottom:28px;}
+.feat-meta{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:32px;}
+.feat-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt3);display:flex;align-items:center;gap:6px;}
+.feat-tag::before{content:'';width:8px;height:1px;background:var(--acc);}
+.feat-thumb{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--rl);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;cursor:pointer;transition:all .3s;}
+.feat-thumb:hover{border-color:var(--border);}
+.feat-thumb::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(201,168,76,.08),transparent);}
+.feat-thumb-emoji{font-size:56px;position:relative;z-index:1;}
+.play-btn{position:absolute;bottom:0;left:0;right:0;top:0;display:flex;align-items:center;justify-content:center;z-index:2;}
+.play-circle{width:64px;height:64px;border-radius:50%;background:rgba(201,168,76,.15);border:1.5px solid rgba(201,168,76,.4);display:flex;align-items:center;justify-content:center;transition:all .3s;backdrop-filter:blur(8px);}
+.feat-thumb:hover .play-circle{background:var(--acc);border-color:var(--acc);}
+.play-circle svg{width:22px;height:22px;color:var(--acc);margin-left:3px;transition:color .3s;}
+.feat-thumb:hover .play-circle svg{color:#0c0b09;}
+
+/* SONGS GRID */
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;}
+.scard{background:var(--card);border:1px solid var(--border2);border-radius:var(--rl);overflow:hidden;text-decoration:none;color:var(--txt);transition:all .3s;display:flex;flex-direction:column;}
+.scard:hover{transform:translateY(-6px);border-color:var(--border);box-shadow:0 20px 56px rgba(0,0,0,.5),0 0 0 1px rgba(201,168,76,.08);}
+.sthumb{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-size:40px;position:relative;overflow:hidden;}
+.st1{background:linear-gradient(135deg,#1a140a,#2e2010);}
+.st2{background:linear-gradient(135deg,#0a1214,#0e2020);}
+.st3{background:linear-gradient(135deg,#14100a,#221808);}
+.st4{background:linear-gradient(135deg,#100a14,#1c1020);}
+.st5{background:linear-gradient(135deg,#0a1210,#10201c);}
+.st6{background:linear-gradient(135deg,#14080a,#201010);}
+.st7{background:linear-gradient(135deg,#0e0e14,#14141c);}
+.st8{background:linear-gradient(135deg,#12100a,#1e1a08);}
+.scat{position:absolute;top:10px;left:10px;z-index:1;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:4px 10px;border-radius:2px;}
+.sc-ly{background:rgba(201,168,76,.2);color:var(--acc);border:1px solid rgba(201,168,76,.3);}
+.sc-co{background:rgba(74,139,126,.2);color:#6dbfb0;border:1px solid rgba(74,139,126,.3);}
+.sc-li{background:rgba(194,75,58,.2);color:#e8897a;border:1px solid rgba(194,75,58,.3);}
+.splay{position:absolute;bottom:10px;right:10px;width:30px;height:30px;border-radius:50%;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);display:flex;align-items:center;justify-content:center;transition:all .2s;}
+.scard:hover .splay{background:var(--acc);border-color:var(--acc);}
+.splay svg{width:12px;height:12px;color:var(--acc);margin-left:2px;transition:color .2s;}
+.scard:hover .splay svg{color:#0c0b09;}
+.sbody{padding:20px;flex:1;display:flex;flex-direction:column;}
+.smeta{font-size:10px;color:var(--txt3);font-family:'DM Mono',monospace;letter-spacing:1px;margin-bottom:8px;}
+.stitle{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;line-height:1.3;margin-bottom:8px;}
+.sexc{font-size:13px;color:var(--txt3);line-height:1.65;font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:14px;flex:1;}
+.sread{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--acc);display:inline-flex;align-items:center;gap:6px;transition:gap .2s;}
+.scard:hover .sread{gap:10px;}
+
+/* LYRIC EXCERPT */
+.lyric-feature{background:var(--card);border:1px solid var(--border);border-radius:var(--rl);padding:48px 56px;position:relative;overflow:hidden;max-width:820px;margin:0 auto;}
+.lyric-feature::before{content:'\201C';position:absolute;top:-30px;left:24px;font-family:'Playfair Display',serif;font-size:220px;color:rgba(201,168,76,.05);line-height:1;pointer-events:none;}
+.lyric-feature::after{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--acc),var(--teal));}
+.lyric-feature-lang{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--txt3);margin-bottom:24px;display:flex;align-items:center;gap:10px;}
+.lyric-feature-lang::after{content:'';flex:1;height:1px;background:var(--border);}
+.lyric-feature-text{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;line-height:2.2;color:var(--txt2);font-style:italic;margin-bottom:28px;}
+.lyric-feature-text strong{color:var(--txt);font-style:normal;}
+.lyric-feature-attr{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt3);}
+.lyric-feature-attr em{color:var(--acc);font-style:normal;}
+
+/* CTA */
+.ctabox{background:linear-gradient(135deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:var(--rxl);padding:72px;text-align:center;position:relative;overflow:hidden;}
+.ctabox::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(201,168,76,.08),transparent);pointer-events:none;}
+.ctabox *{position:relative;z-index:1;}
+.ctabox h2{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,46px);font-weight:900;line-height:1.15;margin-bottom:14px;}
+.ctabox h2 em{color:var(--acc);font-style:italic;}
+.ctabox p{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;color:var(--txt2);max-width:460px;margin:0 auto 40px;line-height:1.8;}
+.ctabtns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+@media(max-width:768px){
+  .feat-song{grid-template-columns:1fr;padding:32px 24px;gap:32px;}
+  .lyric-feature{padding:32px 24px;}
+  .ctabox{padding:40px 24px;}
+}
+</style>
+</head>
+<body>
+<div class="ink ink1"></div>
+<div class="ink ink2"></div>
+
+<nav id="nav">
+  <div class="nav-in">
+    <a href="index.html" class="logo">Gunajit<em>.kalita</em></a>
+    <ul class="nav-ul">
+      <li><a href="about.html">About</a></li>
+      <li><a href="songs.html" class="on">Songs</a></li>
+      <li><a href="poems.html">Poems</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://www.instagram.com/gunajit.0/" target="_blank" rel="noopener" class="nav-cta">Instagram ↗</a></li>
+    </ul>
+    <button class="mbtn" onclick="toggleMenu()" aria-label="Menu">☰</button>
+  </div>
+</nav>
+<div class="mmenu" id="mmenu">
+  <a href="index.html" onclick="toggleMenu()">Home</a>
+  <a href="about.html" onclick="toggleMenu()">About</a>
+  <a href="songs.html" onclick="toggleMenu()">Songs</a>
+  <a href="poems.html" onclick="toggleMenu()">Poems</a>
+  <a href="contact.html" onclick="toggleMenu()">Contact</a>
+  <a href="https://www.instagram.com/gunajit.0/" target="_blank" rel="noopener" onclick="toggleMenu()" style="color:var(--acc);">Instagram ↗</a>
+  <a href="https://www.youtube.com/@gunajitkalita6667/videos" target="_blank" rel="noopener" onclick="toggleMenu()">YouTube ↗</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-in">
+    <p class="breadcrumb"><a href="index.html">Home</a> → Songs</p>
+    <span class="lbl">Discography</span>
+    <h1 class="page-h1">Songs Written from<br><em>Assam's Soul</em></h1>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:300;font-style:italic;color:var(--txt2);max-width:600px;margin-top:16px;line-height:1.75;">Each song is a सংগ्राम — a struggle, a conversation with life. Here are the lyrics and compositions of Gunajit Kalita.</p>
+  </div>
+</div>
+
+<!-- FEATURED SONG -->
+<section class="sec">
+  <div class="sec-in">
+    <span class="lbl">Featured Work</span>
+    <div class="feat-song fu">
+      <div>
+        <span class="feat-badge">Featured Song</span>
+        <h2 class="feat-title">আকুল তা —<br><em>Aakul Taa</em></h2>
+        <p class="feat-desc">"The restless heart that finds no shore. The longing that has no name, only a feeling — and that feeling is Assam."</p>
+        <div class="feat-meta">
+          <span class="feat-tag">Lyricist: Gunajit Kalita</span>
+          <span class="feat-tag">Language: Assamese</span>
+          <span class="feat-tag">Genre: Folk / Lyrical</span>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="https://www.youtube.com/@gunajitkalita6667/videos" target="_blank" rel="noopener" class="btn-gold">Watch on YouTube</a>
+          <a href="https://www.instagram.com/gunajit.0/" target="_blank" rel="noopener" class="btn-ghost">Find on Instagram</a>
+        </div>
+      </div>
+      <a href="https://www.youtube.com/@gunajitkalita6667/videos" target="_blank" rel="noopener" class="feat-thumb">
+        <span class="feat-thumb-emoji">🎵</span>
+        <div class="play-btn">
+          <div class="play-circle"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="divline"></div>
+
+<!-- LYRIC EXCERPT -->
+<section class="sec" style="background:var(--bg1);">
+  <div class="sec-in">
+    <span class="lbl">Lyric Excerpt</span>
+    <h2 class="h2" style="margin-bottom:40px;">Words from <em>Aakul Taa</em></h2>
+    <div class="lyric-feature fscale">
+      <div class="lyric-feature-lang">Assamese · Original Lyric · Gunajit Kalita</div>
+      <p class="lyric-feature-text">
+        আকাশৰ গাত লাগি বোৱা<br>
+        <strong>তুমি মেঘ বৰষীয়া চাদৰ,</strong><br>
+        মোৰ বুকুৰ অনুভৱ জোৱাৰ —<br>
+        <strong>আকুল, আকুল, আকুল তা।</strong>
+      </p>
+      <p class="lyric-feature-attr">— <em>Gunajit Kalita</em> · From the song <em>Aakul Taa</em></p>
+    </div>
+  </div>
+</section>
+
+<div class="divline"></div>
+
+<!-- ALL SONGS -->
+<section class="sec">
+  <div class="sec-in">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:32px;">
+      <div>
+        <span class="lbl">All Works</span>
+        <h2 class="h2" style="margin-bottom:0;">Songs & <em>Compositions</em></h2>
+      </div>
+      <a href="https://www.youtube.com/@gunajitkalita6667/videos" target="_blank" rel="noopener" class="btn-ghost" style="white-space:nowrap;">Full YouTube Channel ↗</a>
+    </div>
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterSongs('all',this)">All Works</button>
+      <button class="filter-btn" onclick="filterSongs('lyrics',this)">Lyrics</button>
+      <button class="filter-btn" onclick="filterSongs('collab',this)">Collaborations</button>
+      <button class="filter-btn" onclick="filterSongs('live',this)">Live Performances</button>
+    </div>
+    <div class="sgrid">
+      <a href="https://www.youtube.com/@gunajitkalita6667/videos" target="_blank" rel="noopener" class="scard fu" data-cat="lyrics">
+        <div class="sthumb st1"><span>🎵</span><span class="scat sc-ly">Lyrics</span><div class="splay"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="sbody"><span class="smeta">Featured · Assamese Folk</span><h3 class="stitle">আকুল তা — Aakul Taa</h3><p class="sexc">The restless heart finds no shore. Gunajit's most recognised lyric — a meditation on longing in Assamese.</p><span class="sread">Watch →</span></div>
+      </a>
+      <a href="https://www.youtube.com/@gunajitkalita6667/videos" target="_blank" rel="noopener" class="scard fu" data-cat="lyrics">
+        <div class="sthumb st2"><span>🌧️</span><span class="scat sc-ly">Lyrics</span><div class="splay"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="sbody"><span class="smeta">Original Lyric · Romantic</span><h3 class="stitle">আকাশৰ গাত লাগি বোৱা</h3><p class="sexc">Clinging to the sky, flowing — a meditation on longing, clouds, and the human spirit set free by rain.</p><span class="sread">Listen →</span></div>
+      </a>
+      <a href="https://www.youtube.com/@gunajitkalita6667/videos" target="_blank" rel="noopener" class="scard fu" data-cat="lyrics">
+        <div class="sthumb st3"><span>☁️</span><span class="scat sc-ly">Lyrics</span><div class="splay"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="sbody"><span class="smeta">Lyric · Love Song</span><h3 class="stitle">তুমি মেঘ বৰষীয়া চাদৰ</h3><p class="sexc">You are the cloudburst blanket — a love lyric for the rain and the one who stays through the storm.</p><span class="sread">Read Lyric →</span></div>
+      </a>
+      <a href="https://www.youtube.com/@gunajitkalita6667/videos" target="_blank" rel="noopener" class="scard fu" data-cat="collab">
+        <div class="sthumb st4"><span>🎸</span><span class="scat sc-co">Collab</span><div class="splay"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="sbody"><span class="smeta">Collaboration · Assamese Rock</span><h3 class="stitle">সংগ্রামৰ আন এটি নাম জীৱন</h3><p class="sexc">The anthem that defines Gunajit's philosophy. Co-written and performed — struggle named as life.</p><span class="sread">Watch →</span></div>
+      </a>
+      <a href="https://www.youtube.com/@gunajitkalita6667/videos" target="_blank" rel="noopener" class="scard fu" data-cat="live">
+        <div class="sthumb st5"><span>🎙️</span><span class="scat sc-li">Live</span><div class="splay"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="sbody"><span class="smeta">Live Performance · Cultural Festival</span><h3 class="stitle">Habi Festival — Original Set</h3><p class="sexc">Performing original compositions at the Habi stage. The moment a lyric becomes something larger than paper.</p><span class="sread">Watch →</span></div>
+      </a>
+      <a href="https://www.youtube.com/@gunajitkalita6667/videos" target="_blank" rel="noopener" class="scard fu" data-cat="lyrics">
+        <div class="sthumb st6"><span>🌙</span><span class="scat sc-ly">Lyrics</span><div class="splay"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="sbody"><span class="smeta">Night Theme · Introspective</span><h3 class="stitle">Night Lyric — Untitled</h3><p class="sexc">Written at midnight, between two silences. The kind of lyric that arrives before sleep and refuses to leave.</p><span class="sread">Discover →</span></div>
+      </a>
+      <a href="https://www.youtube.com/@gunajitkalita6667/videos" target="_blank" rel="noopener" class="scard fu" data-cat="collab">
+        <div class="sthumb st7"><span>🎻</span><span class="scat sc-co">Collab</span><div class="splay"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="sbody"><span class="smeta">Collaborative · Assamese Folk</span><h3 class="stitle">Folk Collaboration — Assam</h3><p class="sexc">Traditional Assamese folk idiom meets modern lyrical sensibility. A collaboration honoring musical heritage.</p><span class="sread">Listen →</span></div>
+      </a>
+      <a href="https://www.youtube.com/@gunajitkalita6667/videos" target="_blank" rel="noopener" class="scard fu" data-cat="live">
+        <div class="sthumb st8"><span>🏛️</span><span class="scat sc-li">Live</span><div class="splay"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="sbody"><span class="smeta">Cultural Event · Community Stage</span><h3 class="stitle">Community Cultural Performance</h3><p class="sexc">Song, poetry and social purpose united. A performance at a community gathering where art serves its highest function.</p><span class="sread">Watch →</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="divline"></div>
+
+<!-- CTA -->
+<section class="sec" style="background:var(--bg1);">
+  <div class="sec-in">
+    <div class="ctabox fscale">
+      <span class="lbl" style="justify-content:center;margin-bottom:20px;">Want New Lyrics?</span>
+      <h2>Commission a Song —<br><em>Your Words, His Craft</em></h2>
+      <p>Looking for an Assamese lyricist for your next musical project? Gunajit is open to lyric commissions, songwriting collaborations, and co-writing sessions.</p>
+      <div class="ctabtns">
+        <a href="https://www.youtube.com/@gunajitkalita6667/videos" target="_blank" rel="noopener" class="btn-gold">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          All Songs on YouTube
+        </a>
+        <a href="contact.html" class="btn-ghost">Commission a Lyric →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="finr">
+    <div class="flogo">Gunajit<em> Kalita</em></div>
+    <p class="ftag">Lyricist · Poet · Composer · Assam, India</p>
+    <div class="flinks">
+      <a href="index.html">Home</a><a href="about.html">About</a>
+      <a href="songs.html">Songs</a><a href="poems.html">Poems</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.instagram.com/gunajit.0/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.youtube.com/@gunajitkalita6667/videos" target="_blank" rel="noopener">YouTube</a>
+    </div>
+    <p class="fcopy">© 2025 Gunajit Kalita · Assamese Lyricist & Poet · সংগ্রামৰ আন এটি নাম জীৱন</p>
+  </div>
+</footer>
+
+<script>
+const NAV=document.getElementById('nav');
+window.addEventListener('scroll',()=>NAV.classList.toggle('scrolled',scrollY>40),{passive:true});
+const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*90);obs.unobserve(e.target);}});},{threshold:.08});
+document.querySelectorAll('.fu,.fl,.fr,.fscale').forEach(el=>obs.observe(el));
+function toggleMenu(){document.getElementById('mmenu').classList.toggle('on');}
+function filterSongs(cat,btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.scard').forEach(c=>{
+    if(cat==='all'||c.dataset.cat===cat){c.style.display='flex';}
+    else{c.style.display='none';}
+  });
+}
+</script>
+</body>
+</html>
