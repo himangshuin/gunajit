@@ -39,13 +39,13 @@
 /* Filter bar */
 .filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:48px;}
 .filter-btn{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:8px 18px;border-radius:2px;border:1px solid var(--border);color:var(--txt3);background:transparent;cursor:pointer;transition:all .2s;}
-.filter-btn:hover,.filter-btn.active{background:var(--acc3);border-color:rgba(201,168,76,.4);color:var(--acc);}
+.filter-btn:hover,.filter-btn.active{background:var(--acc3);border-color:rgba(166,120,42,.4);color:var(--acc);}
 
 /* Hero poem – big featured verse */
-.poem-hero{background:linear-gradient(135deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:var(--rxl);padding:64px;position:relative;overflow:hidden;margin-bottom:56px;box-shadow:var(--shg);}
-.poem-hero::before{content:'\201C';position:absolute;top:-30px;left:28px;font-family:'Playfair Display',serif;font-size:260px;color:rgba(201,168,76,.05);line-height:1;pointer-events:none;}
+.poem-hero{background:linear-gradient(135deg,#fffdf7,#fdf6e8);border:1px solid var(--border);border-radius:var(--rxl);padding:64px;position:relative;overflow:hidden;margin-bottom:56px;box-shadow:var(--shg);}
+.poem-hero::before{content:'\201C';position:absolute;top:-30px;left:28px;font-family:'Playfair Display',serif;font-size:260px;color:rgba(166,120,42,.05);line-height:1;pointer-events:none;}
 .poem-hero::after{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--acc),var(--teal),transparent);}
-.poem-hero-badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--acc);border:1px solid rgba(201,168,76,.3);padding:5px 12px;border-radius:2px;display:inline-block;margin-bottom:24px;background:rgba(201,168,76,.06);}
+.poem-hero-badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--acc);border:1px solid rgba(166,120,42,.3);padding:5px 12px;border-radius:2px;display:inline-block;margin-bottom:24px;background:rgba(166,120,42,.06);}
 .poem-hero-title{font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,44px);font-weight:900;line-height:1.1;letter-spacing:-1.5px;margin-bottom:32px;color:var(--txt);}
 .poem-hero-title em{color:var(--acc);font-style:italic;}
 .poem-hero-body{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;font-style:italic;line-height:2.2;color:var(--txt2);margin-bottom:32px;max-width:640px;}
@@ -60,7 +60,7 @@
 .pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;}
 
 .pcard{background:var(--card);border:1px solid var(--border2);border-radius:var(--rl);overflow:hidden;transition:all .3s;position:relative;}
-.pcard:hover{border-color:var(--border);box-shadow:0 20px 56px rgba(0,0,0,.5),0 0 0 1px rgba(201,168,76,.08);transform:translateY(-5px);}
+.pcard:hover{border-color:var(--border);box-shadow:0 20px 56px rgba(166,120,42,.15),0 0 0 1px rgba(166,120,42,.08);transform:translateY(-5px);}
 .pcard-accent{height:2px;width:100%;}
 .pa-gold{background:linear-gradient(90deg,transparent,var(--acc),transparent);}
 .pa-teal{background:linear-gradient(90deg,transparent,var(--teal),transparent);}
@@ -83,7 +83,7 @@
 .pcard-deco{position:absolute;bottom:16px;right:20px;font-size:52px;opacity:.04;pointer-events:none;}
 
 /* Wide featured card */
-.pcard-wide{grid-column:span 2;background:linear-gradient(135deg,var(--card),var(--card2));border-color:var(--border);}
+.pcard-wide{grid-column:span 2;background:linear-gradient(135deg,#fffdf7,#fdf6e8);border-color:var(--border);}
 @media(max-width:760px){.pcard-wide{grid-column:span 1;}}
 
 /* Assamese quote wall */
@@ -108,8 +108,8 @@
 .pac-divider{height:1px;background:var(--border2);margin:20px 0;}
 
 /* CTA */
-.ctabox{background:linear-gradient(135deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:var(--rxl);padding:72px;text-align:center;position:relative;overflow:hidden;}
-.ctabox::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(201,168,76,.08),transparent);pointer-events:none;}
+.ctabox{background:linear-gradient(135deg,#fffdf7,#fdf6e8);border:1px solid var(--border);border-radius:var(--rxl);padding:72px;text-align:center;position:relative;overflow:hidden;}
+.ctabox::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(166,120,42,.08),transparent);pointer-events:none;}
 .ctabox *{position:relative;z-index:1;}
 .ctabox h2{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,46px);font-weight:900;line-height:1.15;margin-bottom:14px;}
 .ctabox h2 em{color:var(--acc);font-style:italic;}
