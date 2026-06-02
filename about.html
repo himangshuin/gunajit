@@ -53,7 +53,7 @@
 .sidebar-card-top{height:3px;background:linear-gradient(90deg,transparent,var(--acc),var(--teal),var(--acc),transparent);}
 .sidebar-card-body{padding:32px 28px;}
 .sk{padding:7px 16px;background:transparent;border:1px solid var(--border);border-radius:2px;font-size:11px;font-family:'DM Mono',monospace;letter-spacing:1px;color:var(--txt3);transition:all .2s;cursor:default;}
-.sk:hover{background:var(--acc3);border-color:rgba(166,120,42,.4);color:var(--acc);}
+.sk:hover{background:var(--acc3);border-color:rgba(160,115,42,.35);color:var(--acc);}
 .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
 
 /* bio info rows */
@@ -74,13 +74,13 @@
 /* Singers list */
 .singers-wall{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0;}
 .singer-tag{padding:9px 18px;background:var(--card);border:1px solid var(--border2);border-radius:var(--r);font-family:'Playfair Display',serif;font-size:14px;color:var(--txt2);transition:all .25s;}
-.singer-tag:hover{border-color:rgba(166,120,42,.4);color:var(--acc);}
-.singer-tag.star{border-color:rgba(166,120,42,.3);color:var(--acc);background:var(--acc3);}
+.singer-tag:hover{border-color:rgba(160,115,42,.35);color:var(--acc);}
+.singer-tag.star{border-color:rgba(160,115,42,.3);color:var(--acc);background:var(--acc3);}
 
 .timeline{margin-top:48px;position:relative;padding-left:36px;}
 .timeline::before{content:'';position:absolute;left:10px;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--acc),var(--teal),transparent);}
 .tli{position:relative;margin-bottom:44px;}
-.tli::before{content:'';position:absolute;left:-30px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--acc);border:2px solid var(--bg);box-shadow:0 0 0 3px rgba(166,120,42,.25);}
+.tli::before{content:'';position:absolute;left:-30px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--acc);border:2px solid var(--bg2);box-shadow:0 0 0 3px rgba(160,115,42,.25);}
 .tli-year{font-size:10px;font-family:'DM Mono',monospace;letter-spacing:2px;text-transform:uppercase;color:var(--acc);margin-bottom:6px;}
 .tli-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--txt);margin-bottom:8px;}
 .tli-body{font-size:15px;color:var(--txt2);line-height:1.75;font-family:'Spectral',serif;}
@@ -88,7 +88,7 @@
 .values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:48px;}
 .vcard{background:var(--card);border:1px solid var(--border2);border-radius:var(--rl);padding:28px;transition:all .3s;}
 .vcard:hover{border-color:var(--border);box-shadow:var(--shg);transform:translateY(-3px);}
-.vnum{font-family:'Playfair Display',serif;font-size:52px;font-weight:700;color:rgba(166,120,42,.08);line-height:1;margin-bottom:8px;}
+.vnum{font-family:'Playfair Display',serif;font-size:52px;font-weight:700;color:rgba(160,115,42,.08);line-height:1;margin-bottom:8px;}
 .vtitle{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--txt);margin-bottom:10px;}
 .vbody{font-size:14px;color:var(--txt2);line-height:1.8;font-family:'Spectral',serif;}
 
@@ -99,8 +99,8 @@
 .sk-name{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--txt);margin-bottom:8px;}
 .sk-desc{font-size:13.5px;color:var(--txt2);line-height:1.7;font-family:'Spectral',serif;}
 
-.ctabox{background:linear-gradient(135deg,#fffdf7,#fdf6e8);border:1px solid var(--border);border-radius:var(--rxl);padding:72px;text-align:center;position:relative;overflow:hidden;box-shadow:0 32px 80px rgba(166,120,42,.18);}
-.ctabox::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(166,120,42,.1),transparent);pointer-events:none;}
+.ctabox{background:linear-gradient(135deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:var(--rxl);padding:72px;text-align:center;position:relative;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,.12);}
+.ctabox::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(160,115,42,.08),transparent);pointer-events:none;}
 .ctabox *{position:relative;z-index:1;}
 .ctabox h2{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,48px);font-weight:900;line-height:1.15;margin-bottom:14px;}
 .ctabox h2 em{color:var(--acc);font-style:italic;}
