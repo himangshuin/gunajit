@@ -7,6 +7,8 @@
 <meta name="description" content="Listen to songs written and composed by Gunajit Kalita — sung by Zubeen Garg, Priyanka Bharali, Sanjib Bora, Subasana Dutta and leading voices of Assam. 50+ original Assamese songs.">
 <meta name="keywords" content="Gunajit Kalita songs, Assamese songs, Zubeen Garg, Priyanka Bharali, Sanjib Bora, Assamese lyrics, gunajit.0 YouTube">
 <meta name="author" content="Gunajit Kalita">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="canonical" href="https://gunajitkalita.github.io/songs.html">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://gunajitkalita.github.io/songs.html">
@@ -15,6 +17,8 @@
 <meta property="og:image" content="https://gunajitkalita.github.io/og-image.png">
 <meta property="og:site_name" content="Gunajit Kalita">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@gunajit.0">
+<meta name="twitter:creator" content="@gunajit.0">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -36,82 +40,82 @@
 <style>
 /* SONGS PAGE */
 .filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:48px;}
-.filter-btn{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:8px 18px;border-radius:2px;border:1px solid var(--border);color:var(--txt3);background:transparent;cursor:pointer;transition:all .2s;}
-.filter-btn:hover,.filter-btn.active{background:var(--acc3);border-color:rgba(160,115,42,.35);color:var(--acc);}
+.filter-btn{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:8px 18px;border-radius:20px;border:1.5px solid rgba(0,0,0,.12);color:var(--txt3);background:var(--card);cursor:pointer;transition:all .2s;}
+.filter-btn:hover{border-color:#f59e0b;color:#92400e;background:#fffbeb;}
+.filter-btn.active{background:#fef3c7;border-color:#f59e0b;color:#92400e;font-weight:600;}
 
 /* FEATURED SONG */
-.feat-song{background:linear-gradient(135deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:var(--rxl);padding:52px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:56px;position:relative;overflow:hidden;box-shadow:var(--shg);}
-.feat-song::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--acc),var(--teal),transparent);}
-.feat-badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--acc);border:1px solid rgba(160,115,42,.3);padding:5px 12px;border-radius:2px;display:inline-block;margin-bottom:20px;background:rgba(160,115,42,.05);}
+.feat-song{background:linear-gradient(135deg,#fffbeb,#ecfdf5);border:2px solid rgba(245,158,11,.25);border-radius:var(--rxl);padding:52px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:56px;position:relative;overflow:hidden;box-shadow:0 12px 48px rgba(245,158,11,.12);}
+.feat-song::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#ef4444,#f59e0b,#10b981,#3b82f6,#7c3aed);}
+.feat-badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:#92400e;border:1.5px solid #f59e0b;padding:5px 14px;border-radius:20px;display:inline-block;margin-bottom:20px;background:#fffbeb;font-weight:600;}
 .feat-title{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,48px);font-weight:900;line-height:1.1;letter-spacing:-1px;margin-bottom:16px;}
-.feat-title em{color:var(--acc);font-style:italic;}
+.feat-title em{color:#92400e;font-style:italic;}
 .feat-desc{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;font-style:italic;color:var(--txt2);line-height:1.75;margin-bottom:28px;}
 .feat-meta{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:32px;}
-.feat-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt3);display:flex;align-items:center;gap:6px;}
-.feat-tag::before{content:'';width:8px;height:1px;background:var(--acc);}
-.feat-thumb{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--rl);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;cursor:pointer;transition:all .3s;text-decoration:none;}
-.feat-thumb:hover{border-color:var(--border);}
-.feat-thumb::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(160,115,42,.06),transparent);}
+.feat-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:#065f46;background:#d1fae5;padding:4px 12px;border-radius:20px;display:flex;align-items:center;gap:6px;border:1.5px solid #10b981;}
+.feat-thumb{background:linear-gradient(135deg,#fef3c7,#d1fae5);border:2px solid rgba(245,158,11,.3);border-radius:var(--rl);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;cursor:pointer;transition:all .3s;text-decoration:none;}
+.feat-thumb:hover{border-color:#f59e0b;box-shadow:0 12px 40px rgba(245,158,11,.2);}
 .feat-thumb-emoji{font-size:56px;position:relative;z-index:1;}
 .play-btn{position:absolute;bottom:0;left:0;right:0;top:0;display:flex;align-items:center;justify-content:center;z-index:2;}
-.play-circle{width:64px;height:64px;border-radius:50%;background:rgba(160,115,42,.12);border:1.5px solid rgba(160,115,42,.35);display:flex;align-items:center;justify-content:center;transition:all .3s;backdrop-filter:blur(8px);}
-.feat-thumb:hover .play-circle{background:var(--acc);border-color:var(--acc);}
-.play-circle svg{width:22px;height:22px;color:var(--acc);margin-left:3px;transition:color .3s;}
+.play-circle{width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.85);border:2px solid rgba(245,158,11,.4);display:flex;align-items:center;justify-content:center;transition:all .3s;backdrop-filter:blur(8px);}
+.feat-thumb:hover .play-circle{background:#f59e0b;border-color:#f59e0b;}
+.play-circle svg{width:22px;height:22px;color:#92400e;margin-left:3px;transition:color .3s;}
 .feat-thumb:hover .play-circle svg{color:#fff;}
 
 /* SONGS GRID */
 .sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;}
-.scard{background:var(--card);border:1px solid var(--border2);border-radius:var(--rl);overflow:hidden;text-decoration:none;color:var(--txt);transition:all .3s;display:flex;flex-direction:column;}
-.scard:hover{transform:translateY(-6px);border-color:var(--border);box-shadow:0 20px 56px rgba(0,0,0,.08),0 0 0 1px rgba(160,115,42,.06);}
+.scard{background:var(--card);border:2px solid rgba(0,0,0,.07);border-radius:var(--rl);overflow:hidden;text-decoration:none;color:var(--txt);transition:all .3s;display:flex;flex-direction:column;}
+.scard:hover{transform:translateY(-8px);box-shadow:0 24px 56px rgba(0,0,0,.13);}
 .sthumb{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-size:40px;position:relative;overflow:hidden;}
-.st1{background:linear-gradient(135deg,#f5e8cc,#e8d4a8);}
-.st2{background:linear-gradient(135deg,#d4eae6,#b8d8d2);}
-.st3{background:linear-gradient(135deg,#f5edda,#e8dcc0);}
-.st4{background:linear-gradient(135deg,#e8daf0,#d8c8e8);}
-.st5{background:linear-gradient(135deg,#d8ece8,#bcd8d2);}
-.st6{background:linear-gradient(135deg,#f5ddd8,#e8c4bc);}
-.st7{background:linear-gradient(135deg,#e0e0f0,#d0d0e8);}
-.st8{background:linear-gradient(135deg,#f8f0d8,#ede4c0);}
-.st9{background:linear-gradient(135deg,#d8e4f0,#c0d0e8);}
-.st10{background:linear-gradient(135deg,#f5f0d8,#e8e4c0);}
-.st11{background:linear-gradient(135deg,#f0dce0,#e0c8cc);}
-.st12{background:linear-gradient(135deg,#d8ede8,#c0dcd4);}
-.scat{position:absolute;top:10px;left:10px;z-index:1;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:4px 10px;border-radius:2px;}
-.sc-ly{background:rgba(160,115,42,.15);color:var(--acc);border:1px solid rgba(160,115,42,.3);}
-.sc-co{background:rgba(45,122,110,.15);color:#1e6b5e;border:1px solid rgba(45,122,110,.3);}
-.sc-li{background:rgba(184,58,42,.15);color:#9e2e20;border:1px solid rgba(184,58,42,.3);}
-.splay{position:absolute;bottom:10px;right:10px;width:30px;height:30px;border-radius:50%;background:rgba(160,115,42,.12);border:1px solid rgba(160,115,42,.3);display:flex;align-items:center;justify-content:center;transition:all .2s;}
-.scard:hover .splay{background:var(--acc);border-color:var(--acc);}
-.splay svg{width:12px;height:12px;color:var(--acc);margin-left:2px;transition:color .2s;}
+.st1{background:linear-gradient(135deg,#fef3c7,#fde68a);}
+.st2{background:linear-gradient(135deg,#d1fae5,#6ee7b7);}
+.st3{background:linear-gradient(135deg,#fee2e2,#fca5a5);}
+.st4{background:linear-gradient(135deg,#ede9fe,#c4b5fd);}
+.st5{background:linear-gradient(135deg,#dbeafe,#93c5fd);}
+.st6{background:linear-gradient(135deg,#fce7f3,#f9a8d4);}
+.st7{background:linear-gradient(135deg,#e0e7ff,#a5b4fc);}
+.st8{background:linear-gradient(135deg,#fef9c3,#fef08a);}
+.st9{background:linear-gradient(135deg,#cffafe,#67e8f9);}
+.st10{background:linear-gradient(135deg,#dcfce7,#86efac);}
+.st11{background:linear-gradient(135deg,#ffe4e6,#fda4af);}
+.st12{background:linear-gradient(135deg,#f0fdf4,#bbf7d0);}
+.scat{position:absolute;top:10px;left:10px;z-index:1;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:20px;font-weight:600;}
+.sc-ly{background:#fef3c7;color:#92400e;border:1.5px solid #f59e0b;}
+.sc-co{background:#d1fae5;color:#065f46;border:1.5px solid #10b981;}
+.sc-li{background:#fee2e2;color:#991b1b;border:1.5px solid #ef4444;}
+.splay{position:absolute;bottom:10px;right:10px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.85);border:2px solid rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;transition:all .2s;backdrop-filter:blur(4px);}
+.scard:hover .splay{background:#f59e0b;border-color:#f59e0b;}
+.splay svg{width:12px;height:12px;color:var(--txt2);margin-left:2px;transition:color .2s;}
 .scard:hover .splay svg{color:#fff;}
 .sbody{padding:20px;flex:1;display:flex;flex-direction:column;}
 .smeta{font-size:10px;color:var(--txt3);font-family:'DM Mono',monospace;letter-spacing:1px;margin-bottom:8px;}
 .stitle{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;line-height:1.3;margin-bottom:8px;}
 .sexc{font-size:13px;color:var(--txt3);line-height:1.65;font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:14px;flex:1;}
-.sread{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--acc);display:inline-flex;align-items:center;gap:6px;transition:gap .2s;}
+.sread{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#92400e;display:inline-flex;align-items:center;gap:6px;transition:gap .2s;}
 .scard:hover .sread{gap:10px;}
 
 /* Singer badges */
 .singer-strip{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 0;}
-.sbadge{padding:6px 14px;background:var(--bg2);border:1px solid var(--border2);border-radius:2px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1px;color:var(--txt3);}
-.sbadge.gold{border-color:rgba(160,115,42,.3);color:var(--acc);background:rgba(160,115,42,.05);}
+.sbadge{padding:6px 16px;background:var(--card);border:2px solid rgba(0,0,0,.08);border-radius:20px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1px;color:var(--txt3);transition:all .2s;}
+.sbadge:hover{border-color:#f59e0b;color:#92400e;background:#fffbeb;}
+.sbadge.gold{border-color:#f59e0b;color:#92400e;background:#fef3c7;}
 
 /* LYRIC EXCERPT */
-.lyric-feature{background:var(--card);border:1px solid var(--border);border-radius:var(--rl);padding:48px 56px;position:relative;overflow:hidden;max-width:820px;margin:0 auto;}
-.lyric-feature::before{content:'\201C';position:absolute;top:-30px;left:24px;font-family:'Playfair Display',serif;font-size:220px;color:rgba(160,115,42,.05);line-height:1;pointer-events:none;}
-.lyric-feature::after{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--acc),var(--teal));}
-.lyric-feature-lang{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--txt3);margin-bottom:24px;display:flex;align-items:center;gap:10px;}
-.lyric-feature-lang::after{content:'';flex:1;height:1px;background:var(--border);}
+.lyric-feature{background:linear-gradient(145deg,#fdf4ff,#f0fdf9);border:2px solid rgba(124,58,237,.2);border-radius:var(--rl);padding:48px 56px;position:relative;overflow:hidden;max-width:820px;margin:0 auto;box-shadow:0 12px 40px rgba(124,58,237,.08);}
+.lyric-feature::before{content:'\201C';position:absolute;top:-30px;left:24px;font-family:'Playfair Display',serif;font-size:220px;color:rgba(124,58,237,.06);line-height:1;pointer-events:none;}
+.lyric-feature::after{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,#7c3aed,#10b981,#3b82f6);}
+.lyric-feature-lang{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#5b21b6;margin-bottom:24px;display:flex;align-items:center;gap:10px;}
+.lyric-feature-lang::after{content:'';flex:1;height:1px;background:rgba(124,58,237,.2);}
 .lyric-feature-text{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;line-height:2.2;color:var(--txt2);font-style:italic;margin-bottom:28px;}
 .lyric-feature-text strong{color:var(--txt);font-style:normal;}
 .lyric-feature-attr{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt3);}
-.lyric-feature-attr em{color:var(--acc);font-style:normal;}
+.lyric-feature-attr em{color:#7c3aed;font-style:normal;}
 
-.ctabox{background:linear-gradient(135deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:var(--rxl);padding:72px;text-align:center;position:relative;overflow:hidden;}
-.ctabox::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(160,115,42,.06),transparent);pointer-events:none;}
+.ctabox{background:linear-gradient(135deg,#fffbeb,#ecfdf5,#eff6ff);border:2px solid rgba(245,158,11,.2);border-radius:var(--rxl);padding:72px;text-align:center;position:relative;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.10);}
+.ctabox::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#ef4444,#f59e0b,#10b981,#3b82f6,#7c3aed,#ec4899);}
 .ctabox *{position:relative;z-index:1;}
 .ctabox h2{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,46px);font-weight:900;line-height:1.15;margin-bottom:14px;}
-.ctabox h2 em{color:var(--acc);font-style:italic;}
+.ctabox h2 em{color:#92400e;font-style:italic;}
 .ctabox p{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;color:var(--txt2);max-width:460px;margin:0 auto 40px;line-height:1.8;}
 .ctabtns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
 
@@ -123,8 +127,8 @@
 </style>
 </head>
 <body>
-<div class="ink ink1"></div>
-<div class="ink ink2"></div>
+<div class="ink ink1" aria-hidden="true"></div>
+<div class="ink ink2" aria-hidden="true"></div>
 
 <nav id="nav">
   <div class="nav-in">
@@ -136,7 +140,7 @@
       <li><a href="contact.html">Contact</a></li>
       <li><a href="https://www.instagram.com/gunajit.0/" target="_blank" rel="noopener" class="nav-cta">Instagram ↗</a></li>
     </ul>
-    <button class="mbtn" onclick="toggleMenu()" aria-label="Menu">☰</button>
+    <button class="mbtn" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false" id="mbtn">☰</button>
   </div>
 </nav>
 <div class="mmenu" id="mmenu">
@@ -149,7 +153,7 @@
   <a href="https://www.youtube.com/@gunajitkalita6667/videos" target="_blank" rel="noopener" onclick="toggleMenu()">YouTube ↗</a>
 </div>
 
-<div class="page-hero">
+<div class="page-hero" style="background:linear-gradient(135deg,#fff8f0 0%,#fee2e2 35%,#fef3c7 70%,#fdfaf5 100%)">
   <div class="page-hero-in">
     <p class="breadcrumb"><a href="index.html">Home</a> → Songs</p>
     <span class="lbl">Discography</span>
@@ -168,7 +172,7 @@
 </div>
 
 <!-- FEATURED SONG -->
-<section class="sec sec-ink">
+<section class="sec sec-warm">
   <div class="sec-in">
     <span class="lbl">Featured Work</span>
     <div class="feat-song fu">
@@ -219,7 +223,7 @@
 <div class="divline"></div>
 
 <!-- ALL SONGS — Real YouTube Links -->
-<section class="sec sec-slate">
+<section class="sec sec-deep">
   <div class="sec-in">
     <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:32px;">
       <div>
@@ -340,12 +344,12 @@ const NAV=document.getElementById('nav');
 window.addEventListener('scroll',()=>NAV.classList.toggle('scrolled',scrollY>40),{passive:true});
 const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*90);obs.unobserve(e.target);}});},{threshold:.08});
 document.querySelectorAll('.fu,.fl,.fr,.fscale').forEach(el=>obs.observe(el));
-function toggleMenu(){document.getElementById('mmenu').classList.toggle('on');}
+function toggleMenu(){const m=document.getElementById('mmenu'),btn=document.getElementById('mbtn');const open=m.classList.toggle('on');if(btn)btn.setAttribute('aria-expanded',open);}
 function filterSongs(cat,btn){
   document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   document.querySelectorAll('.scard').forEach(c=>{
-    if(cat==='all'||c.dataset.cat===cat){c.style.display='flex';}
+    if(cat==='all'||c.dataset.cat===cat){c.style.removeProperty('display');}
     else{c.style.display='none';}
   });
 }
@@ -354,7 +358,7 @@ function filterSongs(cat,btn){
 <!-- FLOATING WHATSAPP BUTTON -->
 <div class="wa-float">
   <span class="wa-tooltip">Chat on WhatsApp</span>
-  <a class="wa-btn" href="https://wa.me/91XXXXXXXXXX?text=Hello%20Gunajit%2C%20I%20came%20from%20your%20website%20and%20would%20like%20to%20connect!" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <a class="wa-btn" href="https://wa.me/91YOURNUMBERHERE?text=Hello%20Gunajit%2C%20I%20came%20from%20your%20website%20and%20would%20like%20to%20connect!" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
     <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
