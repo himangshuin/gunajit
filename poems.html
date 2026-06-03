@@ -3,7 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poems & Verse | Gunajit Kalita | Assamese Poet</title>
+<meta name="description" content="Read Gunajit Kalita's original Assamese poems and verse. Poetry rooted in Assam — about struggle, love, nature, and the human soul.">
+<meta name="keywords" content="Gunajit Kalita poems, Assamese poetry, Assam poet, gunajit.0, Assamese verse">
 <meta name="author" content="Gunajit Kalita">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="canonical" href="https://gunajitkalita.github.io/poems.html">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://gunajitkalita.github.io/poems.html">
@@ -12,6 +17,8 @@
 <meta property="og:image" content="https://gunajitkalita.github.io/og-image.png">
 <meta property="og:site_name" content="Gunajit Kalita">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@gunajit.0">
+<meta name="twitter:creator" content="@gunajit.0">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -25,94 +32,96 @@
   }
 }
 </script>
-<title>Poems & Verse | Gunajit Kalita | Assamese Poet</title>
-<meta name="description" content="Read Gunajit Kalita's original Assamese poems and verse. Poetry rooted in Assam — about struggle, love, nature, and the human soul.">
-<meta name="keywords" content="Gunajit Kalita poems, Assamese poetry, Assam poet, gunajit.0, Assamese verse">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Mono:wght@300;400;500&family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
-/* ── POEMS PAGE ────────────────────────────────── */
+/* ── POEMS PAGE ── */
 
-/* Filter bar */
 .filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:48px;}
-.filter-btn{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:8px 18px;border-radius:2px;border:1px solid var(--border);color:var(--txt3);background:transparent;cursor:pointer;transition:all .2s;}
-.filter-btn:hover,.filter-btn.active{background:var(--acc3);border-color:rgba(160,115,42,.35);color:var(--acc);}
+.filter-btn{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:8px 18px;border-radius:20px;border:1.5px solid rgba(0,0,0,.12);color:var(--txt3);background:var(--card);cursor:pointer;transition:all .2s;}
+.filter-btn:hover{border-color:#7c3aed;color:#5b21b6;background:#f5f3ff;}
+.filter-btn.active{background:#ede9fe;border-color:#7c3aed;color:#5b21b6;font-weight:600;}
 
-/* Hero poem – big featured verse */
-.poem-hero{background:linear-gradient(135deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:var(--rxl);padding:64px;position:relative;overflow:hidden;margin-bottom:56px;box-shadow:var(--shg);}
-.poem-hero::before{content:'\201C';position:absolute;top:-30px;left:28px;font-family:'Playfair Display',serif;font-size:260px;color:rgba(160,115,42,.05);line-height:1;pointer-events:none;}
-.poem-hero::after{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--acc),var(--teal),transparent);}
-.poem-hero-badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--acc);border:1px solid rgba(160,115,42,.3);padding:5px 12px;border-radius:2px;display:inline-block;margin-bottom:24px;background:rgba(160,115,42,.05);}
+/* Hero poem */
+.poem-hero{background:linear-gradient(135deg,#fdf4ff,#eff6ff);border:2px solid rgba(124,58,237,.2);border-radius:var(--rxl);padding:64px;position:relative;overflow:hidden;margin-bottom:56px;box-shadow:0 12px 48px rgba(124,58,237,.10);}
+.poem-hero::before{content:'\201C';position:absolute;top:-30px;left:28px;font-family:'Playfair Display',serif;font-size:260px;color:rgba(124,58,237,.06);line-height:1;pointer-events:none;}
+.poem-hero::after{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,#7c3aed,#ec4899,#3b82f6);}
+.poem-hero-badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:#5b21b6;border:1.5px solid #7c3aed;padding:5px 14px;border-radius:20px;display:inline-block;margin-bottom:24px;background:#ede9fe;font-weight:600;}
 .poem-hero-title{font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,44px);font-weight:900;line-height:1.1;letter-spacing:-1.5px;margin-bottom:32px;color:var(--txt);}
-.poem-hero-title em{color:var(--acc);font-style:italic;}
+.poem-hero-title em{color:#5b21b6;font-style:italic;}
 .poem-hero-body{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;font-style:italic;line-height:2.2;color:var(--txt2);margin-bottom:32px;max-width:640px;}
 .poem-hero-body strong{color:var(--txt);font-style:normal;}
 .poem-hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
 .poem-hero-attr{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt3);}
-.poem-hero-attr em{color:var(--acc);font-style:normal;}
+.poem-hero-attr em{color:#7c3aed;font-style:normal;}
 .poem-hero-tags{display:flex;gap:8px;}
-.ptag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:2px;border:1px solid var(--border2);color:var(--txt3);background:transparent;}
+.ptag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:20px;font-weight:600;}
+.ptag:nth-child(1){background:#fef3c7;color:#92400e;border:1.5px solid #f59e0b;}
+.ptag:nth-child(2){background:#d1fae5;color:#065f46;border:1.5px solid #10b981;}
+.ptag:nth-child(3){background:#ede9fe;color:#5b21b6;border:1.5px solid #7c3aed;}
+.ptag:nth-child(n+4){background:#fce7f3;color:#9d174d;border:1.5px solid #ec4899;}
 
 /* Poems grid */
 .pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;}
-
-.pcard{background:var(--card);border:1px solid var(--border2);border-radius:var(--rl);overflow:hidden;transition:all .3s;position:relative;}
-.pcard:hover{border-color:var(--border);box-shadow:0 20px 56px rgba(0,0,0,.08),0 0 0 1px rgba(160,115,42,.06);transform:translateY(-5px);}
-.pcard-accent{height:2px;width:100%;}
-.pa-gold{background:linear-gradient(90deg,transparent,var(--acc),transparent);}
-.pa-teal{background:linear-gradient(90deg,transparent,var(--teal),transparent);}
-.pa-red{background:linear-gradient(90deg,transparent,var(--red),transparent);}
+.pcard{background:var(--card);border:2px solid rgba(0,0,0,.07);border-radius:var(--rl);overflow:hidden;transition:all .3s;position:relative;}
+.pcard:hover{box-shadow:0 20px 56px rgba(0,0,0,.12);transform:translateY(-6px);}
+.pcard-accent{height:3px;width:100%;}
+.pa-gold{background:linear-gradient(90deg,#ef4444,#f59e0b,#fde68a);}
+.pa-teal{background:linear-gradient(90deg,#10b981,#34d399,#6ee7b7);}
+.pa-red{background:linear-gradient(90deg,#ec4899,#f43f5e,#fb7185);}
+.pa-blue{background:linear-gradient(90deg,#3b82f6,#60a5fa,#93c5fd);}
+.pa-purple{background:linear-gradient(90deg,#7c3aed,#8b5cf6,#a78bfa);}
 .pcard-body{padding:28px;}
-.pcard-cat{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:14px;display:inline-flex;align-items:center;gap:8px;}
-.pcc-love{color:#9e2e20;}.pcc-nature{color:#1e6b5e;}.pcc-life{color:var(--acc);}.pcc-social{color:#a78bfa;}
-.pcc-love::before{content:'';width:12px;height:1px;background:#e8897a;}
-.pcc-nature::before{content:'';width:12px;height:1px;background:#6dbfb0;}
-.pcc-life::before{content:'';width:12px;height:1px;background:var(--acc);}
-.pcc-social::before{content:'';width:12px;height:1px;background:#a78bfa;}
+.pcard-cat{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:14px;display:inline-flex;align-items:center;gap:8px;padding:4px 12px;border-radius:20px;font-weight:600;}
+.pcc-love{color:#991b1b;background:#fee2e2;border:1.5px solid #ef4444;}
+.pcc-nature{color:#065f46;background:#d1fae5;border:1.5px solid #10b981;}
+.pcc-life{color:#92400e;background:#fef3c7;border:1.5px solid #f59e0b;}
+.pcc-social{color:#5b21b6;background:#ede9fe;border:1.5px solid #7c3aed;}
 .pcard-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;line-height:1.2;margin-bottom:16px;color:var(--txt);}
-.pcard-title em{font-style:italic;color:var(--acc);}
+.pcard-title em{font-style:italic;color:#5b21b6;}
 .pcard-verse{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;line-height:2.0;color:var(--txt2);margin-bottom:20px;}
 .pcard-verse strong{color:var(--txt);font-style:normal;}
 .pcard-footer{display:flex;align-items:center;justify-content:space-between;}
 .pcard-attr{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--txt3);}
-.pcard-link{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--acc);text-decoration:none;display:inline-flex;align-items:center;gap:5px;transition:gap .2s;}
+.pcard-link{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#5b21b6;text-decoration:none;display:inline-flex;align-items:center;gap:5px;transition:gap .2s;}
 .pcard:hover .pcard-link{gap:9px;}
-.pcard-deco{position:absolute;bottom:16px;right:20px;font-size:52px;opacity:.04;pointer-events:none;}
+.pcard-deco{position:absolute;bottom:16px;right:20px;font-size:52px;opacity:.05;pointer-events:none;}
 
 /* Wide featured card */
-.pcard-wide{grid-column:span 2;background:linear-gradient(135deg,var(--card),var(--card2));border-color:var(--border);}
+.pcard-wide{grid-column:span 2;background:linear-gradient(135deg,#fdf4ff,#eff6ff);border-color:rgba(124,58,237,.2);}
 @media(max-width:760px){.pcard-wide{grid-column:span 1;}}
 
 /* Assamese quote wall */
 .quote-wall{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
 @media(max-width:860px){.quote-wall{grid-template-columns:1fr 1fr;}}
 @media(max-width:560px){.quote-wall{grid-template-columns:1fr;}}
-.qwall-card{background:var(--card);border:1px solid var(--border2);border-radius:var(--rl);padding:24px;transition:all .3s;text-align:center;}
-.qwall-card:hover{border-color:var(--border);box-shadow:var(--shg);transform:translateY(-3px);}
+.qwall-card{background:var(--card);border:2px solid rgba(0,0,0,.07);border-radius:var(--rl);padding:24px;transition:all .3s;text-align:center;}
+.qwall-card:nth-child(1){border-top:3px solid #f59e0b;}.qwall-card:nth-child(2){border-top:3px solid #10b981;}.qwall-card:nth-child(3){border-top:3px solid #7c3aed;}.qwall-card:nth-child(4){border-top:3px solid #ef4444;}.qwall-card:nth-child(5){border-top:3px solid #ec4899;}.qwall-card:nth-child(6){border-top:3px solid #3b82f6;}
+.qwall-card:hover{box-shadow:0 12px 36px rgba(0,0,0,.10);transform:translateY(-4px);}
 .qwall-assamese{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:var(--txt2);line-height:1.8;margin-bottom:12px;}
 .qwall-english{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt3);line-height:1.6;}
-.qwall-line{width:24px;height:1px;background:var(--acc);margin:12px auto 0;}
+.qwall-line{width:28px;height:3px;border-radius:2px;margin:12px auto 0;}
+.qwall-card:nth-child(1) .qwall-line{background:#f59e0b;}.qwall-card:nth-child(2) .qwall-line{background:#10b981;}.qwall-card:nth-child(3) .qwall-line{background:#7c3aed;}.qwall-card:nth-child(4) .qwall-line{background:#ef4444;}.qwall-card:nth-child(5) .qwall-line{background:#ec4899;}.qwall-card:nth-child(6) .qwall-line{background:#3b82f6;}
 
 /* About poetry section */
 .poetry-about{display:grid;grid-template-columns:1fr 380px;gap:64px;align-items:center;}
 @media(max-width:880px){.poetry-about{grid-template-columns:1fr;}}
 .poetry-about-body p{font-family:'Spectral',serif;font-size:16px;color:var(--txt2);line-height:1.9;margin-bottom:18px;}
 .poetry-about-body strong{color:var(--txt);}
-.poetry-about-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rl);padding:36px;box-shadow:var(--shg);position:relative;overflow:hidden;}
-.poetry-about-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--acc),var(--teal),transparent);}
-.pac-num{font-family:'Playfair Display',serif;font-size:64px;font-weight:900;color:var(--acc);line-height:1;}
+.poetry-about-card{background:linear-gradient(145deg,#fffbeb,#ecfdf5);border:2px solid rgba(245,158,11,.25);border-radius:var(--rl);padding:36px;box-shadow:0 12px 40px rgba(245,158,11,.10);position:relative;overflow:hidden;}
+.poetry-about-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#ef4444,#f59e0b,#10b981,#3b82f6,#7c3aed);}
+.pac-num{font-family:'Playfair Display',serif;font-size:64px;font-weight:900;color:#92400e;line-height:1;}
 .pac-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--txt3);margin-bottom:28px;display:block;}
-.pac-divider{height:1px;background:var(--border2);margin:20px 0;}
+.pac-divider{height:2px;background:linear-gradient(90deg,#f59e0b,#10b981,transparent);margin:20px 0;border-radius:2px;}
 
 /* CTA */
-.ctabox{background:linear-gradient(135deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:var(--rxl);padding:72px;text-align:center;position:relative;overflow:hidden;}
-.ctabox::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(160,115,42,.06),transparent);pointer-events:none;}
+.ctabox{background:linear-gradient(135deg,#fdf4ff,#eff6ff,#ecfdf5);border:2px solid rgba(124,58,237,.18);border-radius:var(--rxl);padding:72px;text-align:center;position:relative;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.10);}
+.ctabox::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#ef4444,#f59e0b,#10b981,#3b82f6,#7c3aed,#ec4899);}
 .ctabox *{position:relative;z-index:1;}
 .ctabox h2{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,46px);font-weight:900;line-height:1.15;margin-bottom:14px;}
-.ctabox h2 em{color:var(--acc);font-style:italic;}
+.ctabox h2 em{color:#5b21b6;font-style:italic;}
 .ctabox p{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;color:var(--txt2);max-width:460px;margin:0 auto 40px;line-height:1.8;}
 .ctabtns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
 
@@ -123,8 +132,8 @@
 </style>
 </head>
 <body>
-<div class="ink ink1"></div>
-<div class="ink ink2"></div>
+<div class="ink ink1" aria-hidden="true"></div>
+<div class="ink ink2" aria-hidden="true"></div>
 
 <!-- NAV -->
 <nav id="nav">
@@ -137,7 +146,7 @@
       <li><a href="contact.html">Contact</a></li>
       <li><a href="https://www.instagram.com/gunajit.0/" target="_blank" rel="noopener" class="nav-cta">Instagram ↗</a></li>
     </ul>
-    <button class="mbtn" onclick="toggleMenu()" aria-label="Menu">☰</button>
+    <button class="mbtn" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false" id="mbtn">☰</button>
   </div>
 </nav>
 <div class="mmenu" id="mmenu">
@@ -151,7 +160,7 @@
 </div>
 
 <!-- PAGE HERO -->
-<div class="page-hero">
+<div class="page-hero" style="background:linear-gradient(135deg,#fdf4ff 0%,#ede9fe 40%,#dbeafe 70%,#fdfaf5 100%)">
   <div class="page-hero-in">
     <p class="breadcrumb"><a href="index.html">Home</a> → Poems</p>
     <span class="lbl">Poetry</span>
@@ -230,7 +239,7 @@
 <div class="divline"></div>
 
 <!-- POEMS GRID -->
-<section class="sec">
+<section class="sec sec-ember">
   <div class="sec-in">
     <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:32px;">
       <div>
@@ -408,7 +417,7 @@
 <div class="divline"></div>
 
 <!-- ABOUT POETRY SECTION -->
-<section class="sec sec-ink" style="background:var(--bg1);">
+<section class="sec sec-slate" style="background:var(--bg1);">
   <div class="sec-in">
     <div class="poetry-about">
       <div class="poetry-about-body">
@@ -494,7 +503,7 @@ function filterPoems(cat, btn) {
 <!-- FLOATING WHATSAPP BUTTON -->
 <div class="wa-float">
   <span class="wa-tooltip">Chat on WhatsApp</span>
-  <a class="wa-btn" href="https://wa.me/91XXXXXXXXXX?text=Hello%20Gunajit%2C%20I%20came%20from%20your%20website%20and%20would%20like%20to%20connect!" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <a class="wa-btn" href="https://wa.me/91YOURNUMBERHERE?text=Hello%20Gunajit%2C%20I%20came%20from%20your%20website%20and%20would%20like%20to%20connect!" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
     <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
