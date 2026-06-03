@@ -1,5 +1,10 @@
 /* ============================================================
-   GUNAJIT KALITA 
+   GUNAJIT KALITA — Shared Stylesheet
+   Vibrant Light Theme · Rich Multi-Section Palette
+   ============================================================ */
+
+/* ── GLOBAL COLOR PALETTE ───────────────────────────────── */
+:root {
   /* Base */
   --bg:    #fdfaf5;
   --bg1:   #f8f3ea;
