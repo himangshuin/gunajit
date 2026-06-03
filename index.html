@@ -7,6 +7,8 @@
 <meta name="description" content="Gunajit Kalita — Assamese lyricist, poet and composer from Bajali, Assam. Songs sung by Zubeen Garg, Priyanka Bharali, Sanjib Bora and leading Assamese singers. Writing since 2012.">
 <meta name="keywords" content="Gunajit Kalita, Assamese lyricist, Bajali Assam, Zubeen Garg, Priyanka Bharali, Sanjib Bora, gunajit.0, Assam songwriter, Assamese poet">
 <meta name="author" content="Gunajit Kalita">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="canonical" href="https://gunajitkalita.github.io/">
 
 <!-- Open Graph (Facebook, WhatsApp, LinkedIn previews) -->
@@ -20,6 +22,8 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@gunajit.0">
+<meta name="twitter:creator" content="@gunajit.0">
 <meta name="twitter:title" content="Gunajit Kalita | Assamese Lyricist & Poet">
 <meta name="twitter:description" content="Assamese lyricist, poet and composer from Assam. Songs, lyrics and poems rooted in struggle and grace.">
 <meta name="twitter:image" content="https://gunajitkalita.github.io/og-image.png">
@@ -85,53 +89,60 @@
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:130px 40px 100px;z-index:1;}
 .hero-in{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 380px;gap:80px;align-items:center;}
 .eyebrow{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px;}
-.badge{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;padding:6px 14px;border-radius:2px;border:1px solid;}
-.ba{border-color:rgba(160,115,42,.35);color:var(--acc);background:rgba(160,115,42,.07);}
-.bb{border-color:rgba(45,122,110,.35);color:#2d7a6e;background:rgba(45,122,110,.07);}
-.bc{border-color:rgba(26,20,16,.12);color:var(--txt3);background:rgba(26,20,16,.03);}
+.badge{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;padding:7px 16px;border-radius:20px;border:1.5px solid;font-weight:500;}
+.ba{border-color:#f59e0b;color:#92400e;background:#fef3c7;}
+.bb{border-color:#10b981;color:#065f46;background:#d1fae5;}
+.bc{border-color:#6366f1;color:#3730a3;background:#e0e7ff;}
 .hero-sub{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;font-style:italic;color:var(--txt2);line-height:1.7;max-width:520px;margin-bottom:20px;}
-.hero-quote{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:1.5px;color:var(--txt3);margin-bottom:40px;padding-left:16px;border-left:2px solid var(--acc);text-transform:uppercase;}
+.hero-quote{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:1.5px;color:#92400e;margin-bottom:40px;padding:12px 16px;border-left:3px solid #f59e0b;text-transform:uppercase;background:#fffbeb;border-radius:0 6px 6px 0;}
 .acts{display:flex;gap:14px;flex-wrap:wrap;}
 
-/* About */
-.about-bg{background:linear-gradient(180deg,var(--bg),var(--bg1),var(--bg));}
+/* About section */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
-.abox{background:var(--card);border:1px solid var(--border);border-radius:var(--rl);aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;box-shadow:var(--shg);}
-.abox::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(160,115,42,.05),transparent,rgba(74,139,126,.06));}
+.abox{background:linear-gradient(145deg,#fff8e8,#f0faf8);border:2px solid rgba(245,158,11,.25);border-radius:var(--rl);aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;box-shadow:0 8px 40px rgba(245,158,11,.15);}
+.abox::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(245,158,11,.06),transparent,rgba(16,185,129,.06));}
 .abox-inner{position:relative;z-index:1;text-align:center;}
 .abox-inner .emoji{font-size:72px;display:block;margin-bottom:12px;}
-.abox-inner span{display:block;font-family:'Playfair Display',serif;font-size:26px;font-style:italic;color:rgba(201,168,76,.5);letter-spacing:-.5px;}
-.abox-lines{position:absolute;bottom:0;left:0;right:0;padding:24px;opacity:.1;}
-.abox-lines div{height:1px;background:var(--acc);margin-bottom:10px;border-radius:1px;}
-.abox-lines div:nth-child(1){width:80%;}.abox-lines div:nth-child(2){width:60%;}.abox-lines div:nth-child(3){width:90%;}.abox-lines div:nth-child(4){width:45%;}.abox-lines div:nth-child(5){width:70%;}
-.afloat{position:absolute;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px 18px;box-shadow:var(--sh);}
+.abox-inner span{display:block;font-family:'Playfair Display',serif;font-size:26px;font-style:italic;color:rgba(180,120,20,.6);letter-spacing:-.5px;}
+.abox-lines{position:absolute;bottom:0;left:0;right:0;padding:24px;opacity:.15;}
+.abox-lines div{height:2px;margin-bottom:10px;border-radius:2px;}
+.abox-lines div:nth-child(1){width:80%;background:#f59e0b;}.abox-lines div:nth-child(2){width:60%;background:#10b981;}.abox-lines div:nth-child(3){width:90%;background:#3b82f6;}.abox-lines div:nth-child(4){width:45%;background:#ec4899;}.abox-lines div:nth-child(5){width:70%;background:#7c3aed;}
+.afloat{position:absolute;background:var(--card);border:2px solid rgba(245,158,11,.3);border-radius:var(--r);padding:14px 18px;box-shadow:0 6px 24px rgba(0,0,0,.10);}
 .af1{bottom:-20px;left:-20px;}.af2{top:-16px;right:-16px;}
-.afn{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--acc);display:block;}
+.afn{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#b07d1a;display:block;}
 .afl{font-size:10px;color:var(--txt3);font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:1.5px;}
 .abody p{font-family:'Spectral',serif;font-size:16.5px;color:var(--txt2);line-height:1.9;margin-bottom:18px;}
 .abody strong{color:var(--txt);}
 .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px;}
-.sk{padding:7px 16px;background:transparent;border:1px solid var(--border);border-radius:2px;font-size:11px;font-family:'DM Mono',monospace;letter-spacing:1px;color:var(--txt3);transition:all .2s;cursor:default;}
-.sk:hover{background:var(--acc3);border-color:rgba(160,115,42,.35);color:var(--acc);}
+.sk{padding:7px 16px;border-radius:20px;font-size:11px;font-family:'DM Mono',monospace;letter-spacing:1px;transition:all .2s;cursor:default;border:1.5px solid;}
+.sk:nth-child(1){color:#92400e;border-color:#f59e0b;background:#fffbeb;}
+.sk:nth-child(2){color:#065f46;border-color:#10b981;background:#ecfdf5;}
+.sk:nth-child(3){color:#1e40af;border-color:#3b82f6;background:#eff6ff;}
+.sk:nth-child(4){color:#9d174d;border-color:#ec4899;background:#fdf2f8;}
+.sk:nth-child(5){color:#5b21b6;border-color:#7c3aed;background:#f5f3ff;}
+.sk:nth-child(6){color:#991b1b;border-color:#ef4444;background:#fff5f5;}
+.sk:nth-child(7){color:#14532d;border-color:#22c55e;background:#f0fdf4;}
+.sk:nth-child(8){color:#1e3a5f;border-color:#60a5fa;background:#eff6ff;}
+.sk:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.12);}
 
 /* Works grid */
 .wgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;}
-.wcard{background:var(--card);border:1px solid var(--border2);border-radius:var(--rl);overflow:hidden;text-decoration:none;color:var(--txt);transition:all .3s;}
-.wcard:hover{transform:translateY(-6px);border-color:var(--border);box-shadow:var(--shh);}
+.wcard{background:var(--card);border:1.5px solid rgba(0,0,0,.07);border-radius:var(--rl);overflow:hidden;text-decoration:none;color:var(--txt);transition:all .3s;}
+.wcard:hover{transform:translateY(-8px);box-shadow:0 24px 60px rgba(0,0,0,.14);}
 .wthumb{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-size:40px;position:relative;overflow:hidden;}
-.wt1{background:linear-gradient(135deg,#f5e8cc,#e8d4a8);}
-.wt2{background:linear-gradient(135deg,#d4eae6,#b8d8d2);}
-.wt3{background:linear-gradient(135deg,#f5edda,#e8dcc0);}
-.wt4{background:linear-gradient(135deg,#e8daf0,#d8c8e8);}
-.wt5{background:linear-gradient(135deg,#d8ece8,#bcd8d2);}
-.wt6{background:linear-gradient(135deg,#f5ddd8,#e8c4bc);}
-.wcat{position:absolute;top:12px;left:12px;z-index:1;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:5px 12px;border-radius:2px;}
-.wc-ly{background:rgba(160,115,42,.15);color:#8a5e10;border:1px solid rgba(160,115,42,.3);}
-.wc-po{background:rgba(45,122,110,.15);color:#1e6b5e;border:1px solid rgba(45,122,110,.3);}
-.wc-so{background:rgba(184,58,42,.15);color:#9e2e20;border:1px solid rgba(184,58,42,.3);}
-.wplay{position:absolute;bottom:12px;right:12px;width:34px;height:34px;border-radius:50%;background:rgba(160,115,42,.12);border:1px solid rgba(160,115,42,.3);display:flex;align-items:center;justify-content:center;transition:all .2s;}
+.wt1{background:linear-gradient(135deg,#fef3c7,#fde68a);}
+.wt2{background:linear-gradient(135deg,#d1fae5,#6ee7b7);}
+.wt3{background:linear-gradient(135deg,#fee2e2,#fca5a5);}
+.wt4{background:linear-gradient(135deg,#ede9fe,#c4b5fd);}
+.wt5{background:linear-gradient(135deg,#dbeafe,#93c5fd);}
+.wt6{background:linear-gradient(135deg,#fce7f3,#f9a8d4);}
+.wcat{position:absolute;top:12px;left:12px;z-index:1;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:5px 12px;border-radius:20px;font-weight:600;}
+.wc-ly{background:#fef3c7;color:#92400e;border:1.5px solid #f59e0b;}
+.wc-po{background:#d1fae5;color:#065f46;border:1.5px solid #10b981;}
+.wc-so{background:#fee2e2;color:#991b1b;border:1.5px solid #ef4444;}
+.wplay{position:absolute;bottom:12px;right:12px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.85);border:2px solid rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;transition:all .2s;backdrop-filter:blur(4px);}
 .wcard:hover .wplay{background:var(--acc);border-color:var(--acc);}
-.wplay svg{width:14px;height:14px;color:var(--acc);margin-left:2px;transition:color .2s;}
+.wplay svg{width:14px;height:14px;color:var(--txt2);margin-left:2px;transition:color .2s;}
 .wcard:hover .wplay svg{color:#fff;}
 .wbody{padding:22px;}
 .wdate{font-size:10px;color:var(--txt3);font-family:'DM Mono',monospace;letter-spacing:1px;margin-bottom:8px;}
@@ -141,74 +152,83 @@
 .wcard:hover .wread{gap:10px;}
 
 /* Poem feature */
-.poem-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rl);padding:56px 64px;position:relative;overflow:hidden;max-width:780px;box-shadow:var(--shg);}
-.poem-card::before{content:'\201C';position:absolute;top:-20px;left:32px;font-family:'Playfair Display',serif;font-size:200px;color:rgba(160,115,42,.05);line-height:1;pointer-events:none;}
-.poem-card::after{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--acc),var(--teal));}
-.poem-lang{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--txt3);margin-bottom:24px;display:flex;align-items:center;gap:10px;}
-.poem-lang::after{content:'';flex:1;height:1px;background:var(--border);}
+.poem-card{background:linear-gradient(145deg,#fdf4ff,#f0fdf9);border:2px solid rgba(124,58,237,.15);border-radius:var(--rl);padding:56px 64px;position:relative;overflow:hidden;max-width:780px;box-shadow:0 12px 48px rgba(124,58,237,.10);}
+.poem-card::before{content:'\201C';position:absolute;top:-20px;left:32px;font-family:'Playfair Display',serif;font-size:200px;color:rgba(124,58,237,.06);line-height:1;pointer-events:none;}
+.poem-card::after{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,#7c3aed,#10b981,#3b82f6);}
+.poem-lang{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#5b21b6;margin-bottom:24px;display:flex;align-items:center;gap:10px;}
+.poem-lang::after{content:'';flex:1;height:1px;background:rgba(124,58,237,.2);}
 .poem-text{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;line-height:2.1;color:var(--txt2);font-style:italic;margin-bottom:28px;}
 .poem-text strong{color:var(--txt);font-style:normal;}
 .poem-attr{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt3);}
-.poem-attr em{color:var(--acc);font-style:normal;}
+.poem-attr em{color:#7c3aed;font-style:normal;}
 .poem-stats{margin-top:40px;display:flex;gap:12px;flex-wrap:wrap;}
-.pstat{background:var(--bg2);border:1px solid var(--border2);border-radius:8px;padding:16px 20px;flex:1;min-width:160px;}
+.pstat{background:var(--card);border:2px solid rgba(59,130,246,.15);border-radius:10px;padding:16px 20px;flex:1;min-width:160px;box-shadow:0 4px 16px rgba(59,130,246,.08);}
+.pstat:nth-child(1){border-color:rgba(245,158,11,.25);background:#fffbeb;}
+.pstat:nth-child(2){border-color:rgba(16,185,129,.25);background:#ecfdf5;}
+.pstat:nth-child(3){border-color:rgba(59,130,246,.25);background:#eff6ff;}
 .pstat .psn{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--acc);display:block;}
+.pstat:nth-child(2) .psn{color:#065f46;}
+.pstat:nth-child(3) .psn{color:#1e40af;}
 .pstat .psl{font-size:10px;color:var(--txt3);font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:1.5px;margin-top:2px;display:block;}
 
 /* Lyric wall */
 .lyric-wall{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
-.lyric-card{background:var(--card);border:1px solid var(--border2);border-radius:var(--rl);padding:32px;position:relative;overflow:hidden;transition:all .3s;}
-.lyric-card:hover{border-color:var(--border);box-shadow:var(--shg);}
-.lyric-card::before{content:'\2665';position:absolute;bottom:16px;right:20px;font-size:48px;color:rgba(160,115,42,.05);}
+.lyric-card{background:var(--card);border:2px solid rgba(0,0,0,.07);border-radius:var(--rl);padding:32px;position:relative;overflow:hidden;transition:all .3s;}
+.lyric-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.10);}
+.lyric-card::before{content:'\2665';position:absolute;bottom:12px;right:18px;font-size:52px;color:rgba(236,72,153,.07);}
+.lyric-card:nth-child(2){border-color:rgba(245,158,11,.2);background:linear-gradient(145deg,#fffbeb,#fff);}
+.lyric-card:nth-child(3){border-color:rgba(59,130,246,.2);background:linear-gradient(145deg,#eff6ff,#fff);}
+.lyric-card:nth-child(4){border-color:rgba(16,185,129,.2);background:linear-gradient(145deg,#ecfdf5,#fff);}
+.lyric-card:nth-child(5){border-color:rgba(124,58,237,.2);background:linear-gradient(145deg,#f5f3ff,#fff);}
 .lyric-line{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:var(--txt2);line-height:1.9;margin-bottom:16px;}
 .lyric-line strong{color:var(--txt);font-style:normal;}
 .lyric-source{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--txt3);display:flex;align-items:center;gap:8px;}
-.lyric-source::before{content:'';width:16px;height:1px;background:var(--acc);}
-.lyric-card.featured{grid-column:span 2;background:linear-gradient(135deg,var(--card),var(--card2));border-color:var(--border);}
+.lyric-source::before{content:'';width:16px;height:2px;background:currentColor;}
+.lyric-card.featured{grid-column:span 2;background:linear-gradient(135deg,#fffbeb,#ecfdf5);border-color:rgba(245,158,11,.3);}
 
 /* Links */
 .lgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px;}
-.lcard{display:flex;align-items:center;gap:18px;padding:20px 24px;background:var(--card);border:1px solid var(--border2);border-radius:var(--rl);text-decoration:none;color:var(--txt);transition:all .3s;}
-.lcard:hover{transform:translateY(-4px);border-color:var(--border);box-shadow:0 16px 40px rgba(0,0,0,.10);}
-.lc-ig:hover{box-shadow:0 16px 40px rgba(220,39,67,.12);}
-.lc-yt:hover{box-shadow:0 16px 40px rgba(255,0,0,.10);}
-.liw{width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.lcard{display:flex;align-items:center;gap:18px;padding:20px 24px;background:var(--card);border:2px solid rgba(0,0,0,.07);border-radius:var(--rl);text-decoration:none;color:var(--txt);transition:all .3s;}
+.lcard:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.12);}
+.lc-ig:hover{border-color:#e1306c;box-shadow:0 16px 40px rgba(225,48,108,.18);}
+.lc-yt:hover{border-color:#FF0000;box-shadow:0 16px 40px rgba(255,0,0,.15);}
+.liw{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .li-ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);}
 .li-yt{background:#FF0000;}
-.li-email{background:linear-gradient(135deg,#c9a84c,#a87c2a);}
-.li-teal{background:linear-gradient(135deg,#4a8b7e,#2d6b60);}
-.liw svg{width:20px;height:20px;}
+.li-email{background:linear-gradient(135deg,#f59e0b,#d97706);}
+.li-teal{background:linear-gradient(135deg,#10b981,#059669);}
+.liw svg{width:22px;height:22px;}
 .lt{flex:1;}
-.lt-title{font-family:'Playfair Display',serif;font-weight:700;font-size:14px;margin-bottom:2px;}
+.lt-title{font-family:'Playfair Display',serif;font-weight:700;font-size:15px;margin-bottom:2px;}
 .lt-desc{font-size:11.5px;color:var(--txt3);font-family:'DM Mono',monospace;letter-spacing:.3px;}
-.larr{color:var(--txt3);font-size:16px;transition:transform .2s,color .2s;}
-.lcard:hover .larr{transform:translateX(4px);color:var(--acc);}
+.larr{color:var(--txt3);font-size:18px;transition:transform .2s,color .2s;}
+.lcard:hover .larr{transform:translateX(5px);color:var(--acc);}
 
 /* FAQ */
 .faq-wrap{max-width:780px;}
-.fi{border-bottom:1px solid var(--border2);}
+.fi{border-bottom:2px solid rgba(0,0,0,.06);}
 .fq{width:100%;display:flex;align-items:start;justify-content:space-between;gap:20px;padding:24px 0;background:none;border:none;color:var(--txt);cursor:pointer;text-align:left;transition:color .2s;}
-.fq:hover{color:var(--acc);}
+.fq:hover{color:#92400e;}
 .fqt{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;line-height:1.35;flex:1;}
-.fico{min-width:28px;height:28px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;color:var(--acc);transition:all .3s;background:transparent;}
-.fi.on .fico{transform:rotate(45deg);background:var(--acc);color:#fff;border-color:var(--acc);}
+.fico{min-width:30px;height:30px;border-radius:50%;border:2px solid rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;color:var(--acc);transition:all .3s;background:transparent;}
+.fi.on .fico{transform:rotate(45deg);background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;border-color:transparent;}
 .fa{font-size:15.5px;color:var(--txt2);line-height:1.85;max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;font-family:'Spectral',serif;}
 .fi.on .fa{max-height:400px;padding-bottom:24px;}
 
 /* CTA box */
-.ctabox{background:linear-gradient(135deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:var(--rxl);padding:80px;text-align:center;position:relative;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,.12);}
-.ctabox::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(160,115,42,.08),transparent);pointer-events:none;}
+.ctabox{background:linear-gradient(135deg,#fffbeb,#ecfdf5,#eff6ff);border:2px solid rgba(245,158,11,.2);border-radius:var(--rxl);padding:80px;text-align:center;position:relative;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.10);}
+.ctabox::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#ef4444,#f59e0b,#10b981,#3b82f6,#7c3aed,#ec4899);}
 .ctabox *{position:relative;z-index:1;}
 .ctabox h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,52px);font-weight:900;line-height:1.15;margin-bottom:16px;}
-.ctabox h2 em{color:var(--acc);font-style:italic;}
+.ctabox h2 em{color:#92400e;font-style:italic;}
 .ctabox p{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;color:var(--txt2);max-width:480px;margin:0 auto 44px;line-height:1.8;}
 .ctabtns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-.ctabtn-ig{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366);color:white;padding:14px 28px;border-radius:3px;font-family:'DM Mono',monospace;font-weight:500;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all .3s;}
-.ctabtn-ig:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(220,39,67,.4);}
-.ctabtn-yt{display:inline-flex;align-items:center;gap:9px;background:#FF0000;color:white;padding:14px 28px;border-radius:3px;font-family:'DM Mono',monospace;font-weight:500;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all .3s;}
-.ctabtn-yt:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(255,0,0,.4);}
-.ctabtn-out{display:inline-flex;align-items:center;gap:9px;background:transparent;color:var(--txt2);padding:14px 28px;border-radius:3px;font-family:'DM Mono',monospace;font-weight:400;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:1px solid var(--border);transition:all .3s;}
-.ctabtn-out:hover{border-color:rgba(160,115,42,.35);color:var(--acc);transform:translateY(-1px);}
+.ctabtn-ig{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366);color:white;padding:14px 28px;border-radius:6px;font-family:'DM Mono',monospace;font-weight:500;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all .3s;box-shadow:0 4px 16px rgba(220,39,67,.3);}
+.ctabtn-ig:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(220,39,67,.5);}
+.ctabtn-yt{display:inline-flex;align-items:center;gap:9px;background:#FF0000;color:white;padding:14px 28px;border-radius:6px;font-family:'DM Mono',monospace;font-weight:500;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all .3s;box-shadow:0 4px 16px rgba(255,0,0,.3);}
+.ctabtn-yt:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(255,0,0,.5);}
+.ctabtn-out{display:inline-flex;align-items:center;gap:9px;background:white;color:var(--txt2);padding:14px 28px;border-radius:6px;font-family:'DM Mono',monospace;font-weight:500;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:2px solid rgba(176,125,26,.3);transition:all .3s;}
+.ctabtn-out:hover{border-color:var(--acc);color:var(--acc);transform:translateY(-1px);box-shadow:0 6px 20px rgba(176,125,26,.2);}
 
 @media(max-width:960px){
   .hero-in{grid-template-columns:1fr;}
@@ -226,25 +246,27 @@
 </style>
 </head>
 <body>
-<div class="ink ink1"></div>
-<div class="ink ink2"></div>
+<div class="ink ink1" aria-hidden="true"></div>
+<div class="ink ink2" aria-hidden="true"></div>
 
 <!-- NAV -->
 <nav id="nav">
   <div class="nav-in">
     <a href="index.html" class="logo">Gunajit<em>.kalita</em></a>
     <ul class="nav-ul">
+      <li><a href="index.html" class="on">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="songs.html">Songs</a></li>
       <li><a href="poems.html">Poems</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="https://www.instagram.com/gunajit.0/" target="_blank" rel="noopener" class="nav-cta">Instagram ↗</a></li>
     </ul>
-    <button class="mbtn" onclick="toggleMenu()" aria-label="Menu">☰</button>
+    <button class="mbtn" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false" id="mbtn">☰</button>
   </div>
 </nav>
 
 <div class="mmenu" id="mmenu">
+  <a href="index.html" onclick="toggleMenu()">Home</a>
   <a href="about.html" onclick="toggleMenu()">About</a>
   <a href="songs.html" onclick="toggleMenu()">Songs</a>
   <a href="poems.html" onclick="toggleMenu()">Poems</a>
@@ -254,7 +276,7 @@
 </div>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero hero-rainbow" style="position:relative;background:linear-gradient(145deg,#fffbf5 0%,#fff8ee 50%,#f0fff8 100%)">
   <div class="hero-in">
     <div>
       <div class="eyebrow fu">
@@ -325,7 +347,7 @@
           <div class="abox-lines"><div></div><div></div><div></div><div></div><div></div></div>
         </div>
         <div class="afloat af1"><span class="afn">50+</span><span class="afl">Songs Written</span></div>
-        <div class="afloat af2"><span class="afn">5+</span><span class="afl">Years Creating</span></div>
+        <div class="afloat af2"><span class="afn">13+</span><span class="afl">Years Creating</span></div>
       </div>
       <div class="abody fr">
         <span class="lbl">About the Poet</span>
@@ -478,11 +500,11 @@
     <h2 class="h2" style="margin-bottom:16px;">About <em>Gunajit</em></h2>
     <p class="desc">Common questions about the lyricist, his work, and Assamese music.</p>
     <div class="faq-wrap">
-      <div class="fi"><button class="fq" onclick="toggleFaq(this)"><span class="fqt">Who is Gunajit Kalita?</span><span class="fico">+</span></button><div class="fa">Gunajit Kalita (Instagram: @gunajit.0) is an Assamese lyricist, poet, composer, story writer and social worker from Balapara, Bajali district, Assam, India. His songs have been sung by Zubeen Garg, Priyanka Bharali, Sanjib Bora, Subasana Dutta, Namrata Kashyap, Deba Geetz and Sanat. He has been writing and composing since 2012.</div></div>
-      <div class="fi"><button class="fq" onclick="toggleFaq(this)"><span class="fqt">What kind of songs and poems does Gunajit write?</span><span class="fico">+</span></button><div class="fa">Gunajit writes primarily in Assamese, with themes of human struggle, love, nature, and the longing of the human soul. His lyric philosophy is captured in his signature line: <em>"সংগ্রামৰ আন এটি নাম জীৱন"</em> — Struggle has another name, that is life.</div></div>
-      <div class="fi"><button class="fq" onclick="toggleFaq(this)"><span class="fqt">Where can I listen to his songs?</span><span class="fico">+</span></button><div class="fa">You can find Gunajit's songs and compositions on his YouTube channel at youtube.com/@gunajitkalita6667 and discover his creative journey through Instagram @gunajit.0, where he regularly shares lyrics, poems, and performance videos.</div></div>
-      <div class="fi"><button class="fq" onclick="toggleFaq(this)"><span class="fqt">Can I collaborate with Gunajit?</span><span class="fico">+</span></button><div class="fa">Yes! Gunajit is open to collaborations with musicians, composers, and fellow artists. Reach him through Instagram DM (@gunajit.0) or via the contact page. He has collaborated on multiple songs and is particularly interested in Assamese music projects.</div></div>
-      <div class="fi"><button class="fq" onclick="toggleFaq(this)"><span class="fqt">What does "সংগ্রামৰ আন এটি নাম জীৱন" mean?</span><span class="fico">+</span></button><div class="fa">This Assamese phrase translates to "Struggle has another name — that is Life." It is Gunajit's guiding creative philosophy, reflecting his belief that art and hardship are inseparable, and that beauty is found within the struggle itself.</div></div>
+      <div class="fi"><button class="fq" onclick="toggleFaq(this)" aria-expanded="false"><span class="fqt">Who is Gunajit Kalita?</span><span class="fico">+</span></button><div class="fa">Gunajit Kalita (Instagram: @gunajit.0) is an Assamese lyricist, poet, composer, story writer and social worker from Balapara, Bajali district, Assam, India. His songs have been sung by Zubeen Garg, Priyanka Bharali, Sanjib Bora, Subasana Dutta, Namrata Kashyap, Deba Geetz and Sanat. He has been writing and composing since 2012.</div></div>
+      <div class="fi"><button class="fq" onclick="toggleFaq(this)" aria-expanded="false"><span class="fqt">What kind of songs and poems does Gunajit write?</span><span class="fico">+</span></button><div class="fa">Gunajit writes primarily in Assamese, with themes of human struggle, love, nature, and the longing of the human soul. His lyric philosophy is captured in his signature line: <em>"সংগ্রামৰ আন এটি নাম জীৱন"</em> — Struggle has another name, that is life.</div></div>
+      <div class="fi"><button class="fq" onclick="toggleFaq(this)" aria-expanded="false"><span class="fqt">Where can I listen to his songs?</span><span class="fico">+</span></button><div class="fa">You can find Gunajit's songs and compositions on his YouTube channel at youtube.com/@gunajitkalita6667 and discover his creative journey through Instagram @gunajit.0, where he regularly shares lyrics, poems, and performance videos.</div></div>
+      <div class="fi"><button class="fq" onclick="toggleFaq(this)" aria-expanded="false"><span class="fqt">Can I collaborate with Gunajit?</span><span class="fico">+</span></button><div class="fa">Yes! Gunajit is open to collaborations with musicians, composers, and fellow artists. Reach him through Instagram DM (@gunajit.0) or via the contact page. He has collaborated on multiple songs and is particularly interested in Assamese music projects.</div></div>
+      <div class="fi"><button class="fq" onclick="toggleFaq(this)" aria-expanded="false"><span class="fqt">What does "সংগ্রামৰ আন এটি নাম জীৱন" mean?</span><span class="fico">+</span></button><div class="fa">This Assamese phrase translates to "Struggle has another name — that is Life." It is Gunajit's guiding creative philosophy, reflecting his belief that art and hardship are inseparable, and that beauty is found within the struggle itself.</div></div>
     </div>
   </div>
 </section>
@@ -533,14 +555,14 @@ const obs=new IntersectionObserver(entries=>{
   entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*90);obs.unobserve(e.target);}});
 },{threshold:.08});
 document.querySelectorAll('.fu,.fl,.fr,.fscale').forEach(el=>obs.observe(el));
-function toggleMenu(){document.getElementById('mmenu').classList.toggle('on');}
-function toggleFaq(btn){const fi=btn.closest('.fi'),was=fi.classList.contains('on');document.querySelectorAll('.fi.on').forEach(f=>f.classList.remove('on'));if(!was)fi.classList.add('on');}
+function toggleMenu(){const m=document.getElementById('mmenu'),btn=document.getElementById('mbtn');const open=m.classList.toggle('on');if(btn)btn.setAttribute('aria-expanded',open);}
+function toggleFaq(btn){const fi=btn.closest('.fi'),was=fi.classList.contains('on');document.querySelectorAll('.fi.on').forEach(f=>{f.classList.remove('on');f.querySelector('.fq').setAttribute('aria-expanded','false');});if(!was){fi.classList.add('on');btn.setAttribute('aria-expanded','true');}}
 </script>
 
 <!-- FLOATING WHATSAPP BUTTON -->
 <div class="wa-float">
   <span class="wa-tooltip">Chat on WhatsApp</span>
-  <a class="wa-btn" href="https://wa.me/91XXXXXXXXXX?text=Hello%20Gunajit%2C%20I%20came%20from%20your%20website%20and%20would%20like%20to%20connect!" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <a class="wa-btn" href="https://wa.me/91YOURNUMBERHERE?text=Hello%20Gunajit%2C%20I%20came%20from%20your%20website%20and%20would%20like%20to%20connect!" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
     <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
