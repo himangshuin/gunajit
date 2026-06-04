@@ -358,10 +358,16 @@
 
 <script>
 const NAV=document.getElementById('nav');
-window.addEventListener('scroll',()=>NAV.classList.toggle('scrolled',scrollY>40),{passive:true});
+const scrollTopBtn=document.getElementById('scrollTop');
+window.addEventListener('scroll',()=>{
+  NAV.classList.toggle('scrolled',scrollY>40);
+  if(scrollTopBtn)scrollTopBtn.classList.toggle('visible',scrollY>400);
+},{passive:true});
 const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*90);obs.unobserve(e.target);}});},{threshold:.08});
 document.querySelectorAll('.fu,.fl,.fr,.fscale').forEach(el=>obs.observe(el));
-function toggleMenu(){const m=document.getElementById('mmenu'),btn=document.getElementById('mbtn');const open=m.classList.toggle('on');if(btn)btn.setAttribute('aria-expanded',open);}
+function toggleMenu(){const m=document.getElementById('mmenu'),btn=document.getElementById('mbtn');const open=m.classList.toggle('on');if(btn){btn.setAttribute('aria-expanded',open);btn.textContent=open?'✕':'☰';}}
+function closeMenu(){const m=document.getElementById('mmenu'),btn=document.getElementById('mbtn');m.classList.remove('on');if(btn){btn.setAttribute('aria-expanded',false);btn.textContent='☰';}}
+document.addEventListener('click',e=>{const m=document.getElementById('mmenu'),btn=document.getElementById('mbtn');if(m&&m.classList.contains('on')&&!m.contains(e.target)&&btn&&!btn.contains(e.target))closeMenu();});
 function filterSongs(cat,btn){
   document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
@@ -381,6 +387,10 @@ function filterSongs(cat,btn){
     </svg>
   </a>
 </div>
+
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">↑</button>
 
 </body>
 </html>
