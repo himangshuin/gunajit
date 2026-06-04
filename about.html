@@ -137,13 +137,18 @@
 
 @media(max-width:960px){
   .about-main-grid{grid-template-columns:1fr;}
-  .sidebar-card{position:static;}
+  /* On mobile, show sidebar BELOW content (not sticky) */
+  .sidebar-card{position:static; order:2;}
+  .story-content{order:1;}
+  .about-main-grid > :first-child { order:2; }
+  .about-main-grid > :last-child  { order:1; }
   .story-content h2{margin-top:36px;}
 }
 @media(max-width:768px){
   .ctabox{padding:40px 24px !important;}
   .ctabtns{flex-direction:column;align-items:stretch;}
-  .values-grid{grid-template-columns:1fr;}
+  .ctabtns a{width:100%;justify-content:center;}
+  .values-grid{grid-template-columns:1fr 1fr;}
   .skills-grid{grid-template-columns:1fr;}
   .timeline{padding-left:28px;}
   .tli-title{font-size:17px;}
@@ -151,14 +156,18 @@
   .singer-tag{font-size:13px;padding:7px 14px;}
   .story-quote{padding:18px 20px;}
   .story-quote p{font-size:17px;}
+  .bio-row{flex-direction:column;gap:4px;}
+  .bio-label{min-width:unset;}
 }
 @media(max-width:560px){
   .sidebar-card-body{padding:24px 18px;}
   .vnum{font-size:40px;}
+  .values-grid{grid-template-columns:1fr;}
   .bio-label{min-width:75px;font-size:9px;}
   .bio-val{font-size:12px;}
   .tli-body{font-size:14px;}
   .skcard{padding:18px;}
+  .srow{display:grid;grid-template-columns:repeat(3,1fr);}
 }
 </style>
 </head>
@@ -473,10 +482,16 @@
 
 <script>
 const NAV=document.getElementById('nav');
-window.addEventListener('scroll',()=>NAV.classList.toggle('scrolled',scrollY>40),{passive:true});
+const scrollTopBtn=document.getElementById('scrollTop');
+window.addEventListener('scroll',()=>{
+  NAV.classList.toggle('scrolled',scrollY>40);
+  if(scrollTopBtn)scrollTopBtn.classList.toggle('visible',scrollY>400);
+},{passive:true});
 const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*90);obs.unobserve(e.target);}});},{threshold:.08});
 document.querySelectorAll('.fu,.fl,.fr,.fscale').forEach(el=>obs.observe(el));
-function toggleMenu(){const m=document.getElementById('mmenu'),btn=document.getElementById('mbtn');const open=m.classList.toggle('on');if(btn)btn.setAttribute('aria-expanded',open);}
+function toggleMenu(){const m=document.getElementById('mmenu'),btn=document.getElementById('mbtn');const open=m.classList.toggle('on');if(btn){btn.setAttribute('aria-expanded',open);btn.textContent=open?'✕':'☰';}}
+function closeMenu(){const m=document.getElementById('mmenu'),btn=document.getElementById('mbtn');m.classList.remove('on');if(btn){btn.setAttribute('aria-expanded',false);btn.textContent='☰';}}
+document.addEventListener('click',e=>{const m=document.getElementById('mmenu'),btn=document.getElementById('mbtn');if(m&&m.classList.contains('on')&&!m.contains(e.target)&&btn&&!btn.contains(e.target))closeMenu();});
 </script>
 
 <!-- FLOATING WHATSAPP BUTTON -->
@@ -488,6 +503,10 @@ function toggleMenu(){const m=document.getElementById('mmenu'),btn=document.getE
     </svg>
   </a>
 </div>
+
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">↑</button>
 
 </body>
 </html>
