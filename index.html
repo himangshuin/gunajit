@@ -88,33 +88,27 @@
 /* ── INDEX-SPECIFIC ── */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:130px 40px 100px;z-index:1;}
 .hero-in{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 380px;gap:80px;align-items:center;}
-.eyebrow{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px;}
-.badge{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;padding:7px 16px;border-radius:20px;border:1.5px solid;font-weight:500;}
+.eyebrow{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px;}
+.badge{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;padding:6px 14px;border-radius:20px;border:1.5px solid;font-weight:500;}
 .ba{border-color:#f59e0b;color:#92400e;background:#fef3c7;}
 .bb{border-color:#10b981;color:#065f46;background:#d1fae5;}
 .bc{border-color:#6366f1;color:#3730a3;background:#e0e7ff;}
 .hero-sub{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;font-style:italic;color:var(--txt2);line-height:1.7;max-width:520px;margin-bottom:20px;}
-.hero-quote{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:1.5px;color:#92400e;margin-bottom:40px;padding:12px 16px;border-left:3px solid #f59e0b;text-transform:uppercase;background:#fffbeb;border-radius:0 6px 6px 0;}
-.acts{display:flex;gap:14px;flex-wrap:wrap;}
+.hero-quote{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:1.5px;color:#92400e;margin-bottom:36px;padding:12px 16px;border-left:3px solid #f59e0b;text-transform:uppercase;background:#fffbeb;border-radius:0 6px 6px 0;}
+.acts{display:flex;gap:12px;flex-wrap:wrap;}
 
-/* About section */
+/* About preview section */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
 .abox{background:linear-gradient(145deg,#fff8e8,#f0faf8);border:2px solid rgba(245,158,11,.25);border-radius:var(--rl);aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;box-shadow:0 8px 40px rgba(245,158,11,.15);}
 .abox::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(245,158,11,.06),transparent,rgba(16,185,129,.06));}
-.abox-inner{position:relative;z-index:1;text-align:center;}
-.abox-inner .emoji{font-size:72px;display:block;margin-bottom:12px;}
-.abox-inner span{display:block;font-family:'Playfair Display',serif;font-size:26px;font-style:italic;color:rgba(180,120,20,.6);letter-spacing:-.5px;}
-.abox-lines{position:absolute;bottom:0;left:0;right:0;padding:24px;opacity:.15;}
-.abox-lines div{height:2px;margin-bottom:10px;border-radius:2px;}
-.abox-lines div:nth-child(1){width:80%;background:#f59e0b;}.abox-lines div:nth-child(2){width:60%;background:#10b981;}.abox-lines div:nth-child(3){width:90%;background:#3b82f6;}.abox-lines div:nth-child(4){width:45%;background:#ec4899;}.abox-lines div:nth-child(5){width:70%;background:#7c3aed;}
 .afloat{position:absolute;background:var(--card);border:2px solid rgba(245,158,11,.3);border-radius:var(--r);padding:14px 18px;box-shadow:0 6px 24px rgba(0,0,0,.10);}
 .af1{bottom:-20px;left:-20px;}.af2{top:-16px;right:-16px;}
 .afn{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#b07d1a;display:block;}
 .afl{font-size:10px;color:var(--txt3);font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:1.5px;}
 .abody p{font-family:'Spectral',serif;font-size:16.5px;color:var(--txt2);line-height:1.9;margin-bottom:18px;}
 .abody strong{color:var(--txt);}
-.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px;}
-.sk{padding:7px 16px;border-radius:20px;font-size:11px;font-family:'DM Mono',monospace;letter-spacing:1px;transition:all .2s;cursor:default;border:1.5px solid;}
+.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;}
+.sk{padding:7px 14px;border-radius:20px;font-size:11px;font-family:'DM Mono',monospace;letter-spacing:1px;transition:all .2s;cursor:default;border:1.5px solid;}
 .sk:nth-child(1){color:#92400e;border-color:#f59e0b;background:#fffbeb;}
 .sk:nth-child(2){color:#065f46;border-color:#10b981;background:#ecfdf5;}
 .sk:nth-child(3){color:#1e40af;border-color:#3b82f6;background:#eff6ff;}
@@ -126,7 +120,7 @@
 .sk:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.12);}
 
 /* Works grid */
-.wgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;}
+.wgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;}
 .wcard{background:var(--card);border:1.5px solid rgba(0,0,0,.07);border-radius:var(--rl);overflow:hidden;text-decoration:none;color:var(--txt);transition:all .3s;}
 .wcard:hover{transform:translateY(-8px);box-shadow:0 24px 60px rgba(0,0,0,.14);}
 .wthumb{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-size:40px;position:relative;overflow:hidden;}
@@ -144,10 +138,10 @@
 .wcard:hover .wplay{background:var(--acc);border-color:var(--acc);}
 .wplay svg{width:14px;height:14px;color:var(--txt2);margin-left:2px;transition:color .2s;}
 .wcard:hover .wplay svg{color:#fff;}
-.wbody{padding:22px;}
+.wbody{padding:20px;}
 .wdate{font-size:10px;color:var(--txt3);font-family:'DM Mono',monospace;letter-spacing:1px;margin-bottom:8px;}
-.wtitle{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;line-height:1.3;margin-bottom:10px;}
-.wexc{font-size:13.5px;color:var(--txt3);line-height:1.7;font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:14px;}
+.wtitle{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;line-height:1.3;margin-bottom:8px;}
+.wexc{font-size:13px;color:var(--txt3);line-height:1.7;font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:12px;}
 .wread{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--acc);display:inline-flex;align-items:center;gap:6px;transition:gap .2s;}
 .wcard:hover .wread{gap:10px;}
 
@@ -162,7 +156,7 @@
 .poem-attr{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt3);}
 .poem-attr em{color:#7c3aed;font-style:normal;}
 .poem-stats{margin-top:40px;display:flex;gap:12px;flex-wrap:wrap;}
-.pstat{background:var(--card);border:2px solid rgba(59,130,246,.15);border-radius:10px;padding:16px 20px;flex:1;min-width:160px;box-shadow:0 4px 16px rgba(59,130,246,.08);}
+.pstat{background:var(--card);border:2px solid rgba(59,130,246,.15);border-radius:10px;padding:16px 20px;flex:1;min-width:140px;box-shadow:0 4px 16px rgba(59,130,246,.08);}
 .pstat:nth-child(1){border-color:rgba(245,158,11,.25);background:#fffbeb;}
 .pstat:nth-child(2){border-color:rgba(16,185,129,.25);background:#ecfdf5;}
 .pstat:nth-child(3){border-color:rgba(59,130,246,.25);background:#eff6ff;}
@@ -173,23 +167,23 @@
 
 /* Lyric wall */
 .lyric-wall{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
-.lyric-card{background:var(--card);border:2px solid rgba(0,0,0,.07);border-radius:var(--rl);padding:32px;position:relative;overflow:hidden;transition:all .3s;}
+.lyric-card{background:var(--card);border:2px solid rgba(0,0,0,.07);border-radius:var(--rl);padding:28px;position:relative;overflow:hidden;transition:all .3s;}
 .lyric-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.10);}
 .lyric-card::before{content:'\2665';position:absolute;bottom:12px;right:18px;font-size:52px;color:rgba(236,72,153,.07);}
 .lyric-card:nth-child(2){border-color:rgba(245,158,11,.2);background:linear-gradient(145deg,#fffbeb,#fff);}
 .lyric-card:nth-child(3){border-color:rgba(59,130,246,.2);background:linear-gradient(145deg,#eff6ff,#fff);}
 .lyric-card:nth-child(4){border-color:rgba(16,185,129,.2);background:linear-gradient(145deg,#ecfdf5,#fff);}
 .lyric-card:nth-child(5){border-color:rgba(124,58,237,.2);background:linear-gradient(145deg,#f5f3ff,#fff);}
-.lyric-line{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:var(--txt2);line-height:1.9;margin-bottom:16px;}
+.lyric-line{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:var(--txt2);line-height:1.9;margin-bottom:14px;}
 .lyric-line strong{color:var(--txt);font-style:normal;}
 .lyric-source{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--txt3);display:flex;align-items:center;gap:8px;}
 .lyric-source::before{content:'';width:16px;height:2px;background:currentColor;}
 .lyric-card.featured{grid-column:span 2;background:linear-gradient(135deg,#fffbeb,#ecfdf5);border-color:rgba(245,158,11,.3);}
 
 /* Links */
-.lgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px;}
-.lcard{display:flex;align-items:center;gap:18px;padding:20px 24px;background:var(--card);border:2px solid rgba(0,0,0,.07);border-radius:var(--rl);text-decoration:none;color:var(--txt);transition:all .3s;}
-.lcard:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.12);}
+.lgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;}
+.lcard{display:flex;align-items:center;gap:16px;padding:18px 22px;background:var(--card);border:2px solid rgba(0,0,0,.07);border-radius:var(--rl);text-decoration:none;color:var(--txt);transition:all .3s;}
+.lcard:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.12);}
 .lc-ig:hover{border-color:#e1306c;box-shadow:0 16px 40px rgba(225,48,108,.18);}
 .lc-yt:hover{border-color:#FF0000;box-shadow:0 16px 40px rgba(255,0,0,.15);}
 .liw{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
@@ -198,38 +192,39 @@
 .li-email{background:linear-gradient(135deg,#f59e0b,#d97706);}
 .li-teal{background:linear-gradient(135deg,#10b981,#059669);}
 .liw svg{width:22px;height:22px;}
-.lt{flex:1;}
+.lt{flex:1;min-width:0;}
 .lt-title{font-family:'Playfair Display',serif;font-weight:700;font-size:15px;margin-bottom:2px;}
-.lt-desc{font-size:11.5px;color:var(--txt3);font-family:'DM Mono',monospace;letter-spacing:.3px;}
-.larr{color:var(--txt3);font-size:18px;transition:transform .2s,color .2s;}
+.lt-desc{font-size:11px;color:var(--txt3);font-family:'DM Mono',monospace;letter-spacing:.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.larr{color:var(--txt3);font-size:18px;transition:transform .2s,color .2s;flex-shrink:0;}
 .lcard:hover .larr{transform:translateX(5px);color:var(--acc);}
 
 /* FAQ */
 .faq-wrap{max-width:780px;}
 .fi{border-bottom:2px solid rgba(0,0,0,.06);}
-.fq{width:100%;display:flex;align-items:start;justify-content:space-between;gap:20px;padding:24px 0;background:none;border:none;color:var(--txt);cursor:pointer;text-align:left;transition:color .2s;}
+.fq{width:100%;display:flex;align-items:start;justify-content:space-between;gap:16px;padding:22px 0;background:none;border:none;color:var(--txt);cursor:pointer;text-align:left;transition:color .2s;}
 .fq:hover{color:#92400e;}
-.fqt{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;line-height:1.35;flex:1;}
-.fico{min-width:30px;height:30px;border-radius:50%;border:2px solid rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;color:var(--acc);transition:all .3s;background:transparent;}
+.fqt{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;line-height:1.35;flex:1;}
+.fico{min-width:28px;height:28px;border-radius:50%;border:2px solid rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;color:var(--acc);transition:all .3s;background:transparent;}
 .fi.on .fico{transform:rotate(45deg);background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;border-color:transparent;}
-.fa{font-size:15.5px;color:var(--txt2);line-height:1.85;max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;font-family:'Spectral',serif;}
-.fi.on .fa{max-height:400px;padding-bottom:24px;}
+.fa{font-size:15px;color:var(--txt2);line-height:1.85;max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;font-family:'Spectral',serif;}
+.fi.on .fa{max-height:500px;padding-bottom:22px;}
 
 /* CTA box */
-.ctabox{background:linear-gradient(135deg,#fffbeb,#ecfdf5,#eff6ff);border:2px solid rgba(245,158,11,.2);border-radius:var(--rxl);padding:80px;text-align:center;position:relative;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.10);}
+.ctabox{background:linear-gradient(135deg,#fffbeb,#ecfdf5,#eff6ff);border:2px solid rgba(245,158,11,.2);border-radius:var(--rxl);padding:72px;text-align:center;position:relative;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.10);}
 .ctabox::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#ef4444,#f59e0b,#10b981,#3b82f6,#7c3aed,#ec4899);}
 .ctabox *{position:relative;z-index:1;}
-.ctabox h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,52px);font-weight:900;line-height:1.15;margin-bottom:16px;}
+.ctabox h2{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,52px);font-weight:900;line-height:1.15;margin-bottom:16px;}
 .ctabox h2 em{color:#92400e;font-style:italic;}
-.ctabox p{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;color:var(--txt2);max-width:480px;margin:0 auto 44px;line-height:1.8;}
-.ctabtns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-.ctabtn-ig{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366);color:white;padding:14px 28px;border-radius:6px;font-family:'DM Mono',monospace;font-weight:500;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all .3s;box-shadow:0 4px 16px rgba(220,39,67,.3);}
+.ctabox p{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;color:var(--txt2);max-width:480px;margin:0 auto 40px;line-height:1.8;}
+.ctabtns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.ctabtn-ig{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366);color:white;padding:14px 24px;border-radius:6px;font-family:'DM Mono',monospace;font-weight:500;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all .3s;box-shadow:0 4px 16px rgba(220,39,67,.3);}
 .ctabtn-ig:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(220,39,67,.5);}
-.ctabtn-yt{display:inline-flex;align-items:center;gap:9px;background:#FF0000;color:white;padding:14px 28px;border-radius:6px;font-family:'DM Mono',monospace;font-weight:500;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all .3s;box-shadow:0 4px 16px rgba(255,0,0,.3);}
+.ctabtn-yt{display:inline-flex;align-items:center;gap:9px;background:#FF0000;color:white;padding:14px 24px;border-radius:6px;font-family:'DM Mono',monospace;font-weight:500;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all .3s;box-shadow:0 4px 16px rgba(255,0,0,.3);}
 .ctabtn-yt:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(255,0,0,.5);}
-.ctabtn-out{display:inline-flex;align-items:center;gap:9px;background:white;color:var(--txt2);padding:14px 28px;border-radius:6px;font-family:'DM Mono',monospace;font-weight:500;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:2px solid rgba(176,125,26,.3);transition:all .3s;}
+.ctabtn-out{display:inline-flex;align-items:center;gap:9px;background:white;color:var(--txt2);padding:14px 24px;border-radius:6px;font-family:'DM Mono',monospace;font-weight:500;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:2px solid rgba(176,125,26,.3);transition:all .3s;}
 .ctabtn-out:hover{border-color:var(--acc);color:var(--acc);transform:translateY(-1px);box-shadow:0 6px 20px rgba(176,125,26,.2);}
 
+/* ── MOBILE BREAKPOINTS ── */
 @media(max-width:960px){
   .hero-in{grid-template-columns:1fr;}
   .pcard{display:none;}
@@ -239,16 +234,27 @@
   .lyric-card.featured{grid-column:span 1;}
 }
 @media(max-width:768px){
-  .hero{padding:110px 24px 80px;}
-  .poem-card{padding:36px 28px;}
-  .ctabox{padding:44px 28px;}
+  .hero{padding:96px 20px 72px;}
+  .hero-sub{font-size:18px;max-width:100%;}
+  .poem-card{padding:32px 22px;}
+  .poem-text{font-size:19px;}
+  .pstat{min-width:calc(50% - 6px);}
+  .ctabox{padding:44px 24px;}
+  .ctabtns{flex-direction:column;align-items:stretch;}
+  .ctabtn-ig,.ctabtn-yt,.ctabtn-out{width:100%;justify-content:center;}
+  .fqt{font-size:16px;}
+  .lgrid{grid-template-columns:1fr;}
+  .lt-desc{white-space:normal;}
 }
-/* Gallery responsive */
-.gallery-grid{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto;gap:16px;max-width:900px;}
-@media(max-width:700px){
-  .gallery-grid{grid-template-columns:1fr 1fr !important;}
-  .gallery-tall{grid-column:1/3 !important;grid-row:auto !important;aspect-ratio:4/3 !important;}
-  .gallery-wide{grid-column:1/3 !important;}
+@media(max-width:560px){
+  .hero{padding:88px 16px 64px;}
+  .lyric-line{font-size:15px;}
+  .wgrid{grid-template-columns:1fr;}
+  .poem-stats{flex-direction:column;}
+  .pstat{min-width:auto;}
+  .afloat{padding:10px 12px;}
+  .af1{bottom:-10px;left:-10px;}.af2{top:-10px;right:-10px;}
+  .afn{font-size:20px;}
 }
 </style>
 </head>
@@ -311,28 +317,35 @@
       </div>
     </div>
 
-    <div class="pcard fr" style="background:none;border:none;box-shadow:none;padding:0;position:relative;">
-      <!-- Hero Portrait Photo -->
-      <div style="position:relative;width:100%;">
-        <div style="border-radius:22px;overflow:hidden;box-shadow:0 32px 80px rgba(176,125,26,.22),0 0 0 1px rgba(176,125,26,.15);position:relative;">
-          <img src="photo1.jpeg" alt="Gunajit Kalita — Assamese Lyricist and Poet" style="width:100%;display:block;object-fit:cover;aspect-ratio:3/4;" loading="eager"/>
-          <!-- subtle gradient overlay at bottom -->
-          <div style="position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(transparent,rgba(26,20,16,.45));border-radius:0 0 22px 22px;"></div>
-          <!-- name tag over image -->
-          <div style="position:absolute;bottom:20px;left:20px;right:20px;">
-            <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:#fff;letter-spacing:-.3px;text-shadow:0 2px 8px rgba(0,0,0,.4);">Gunajit Kalita</div>
-            <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;color:rgba(255,255,255,.75);text-transform:uppercase;margin-top:3px;">Lyricist · Poet · Composer</div>
-          </div>
+    <div class="pcard fr">
+      <div class="aw">
+        <div class="aring"></div>
+        <div class="ains" style="overflow:hidden;background:none;padding:0;border:3px solid var(--bg);">
+          <img src="gunajit-2.jpg" alt="Gunajit Kalita" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:50%;">
         </div>
-        <!-- floating stat badges -->
-        <div style="position:absolute;top:-14px;right:-14px;background:#fff;border:2px solid rgba(245,158,11,.35);border-radius:12px;padding:10px 16px;box-shadow:0 6px 24px rgba(0,0,0,.12);">
-          <span style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#b07d1a;display:block;">50+</span>
-          <span style="font-size:9px;color:#8a7660;font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:1.5px;">Songs Written</span>
-        </div>
-        <div style="position:absolute;bottom:-14px;left:-14px;background:#fff;border:2px solid rgba(16,185,129,.3);border-radius:12px;padding:10px 16px;box-shadow:0 6px 24px rgba(0,0,0,.12);">
-          <span style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#065f46;display:block;">13+</span>
-          <span style="font-size:9px;color:#8a7660;font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:1.5px;">Years Creating</span>
-        </div>
+        <div class="adot"></div>
+      </div>
+      <div class="pname">Gunajit Kalita</div>
+      <div class="phandle">@gunajit.0</div>
+      <div class="ploc">📍 Bajali, Assam, India</div>
+      <div class="srow">
+        <div class="scell"><span class="sn">494</span><span class="sl">Followers</span></div>
+        <div class="scell"><span class="sn">380</span><span class="sl">Posts</span></div>
+        <div class="scell"><span class="sn">50+</span><span class="sl">Songs</span></div>
+      </div>
+      <div class="qlinks">
+        <a href="https://www.instagram.com/gunajit.0/" target="_blank" rel="noopener" class="ql">
+          <svg viewBox="0 0 24 24" fill="#E4405F"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          Instagram · @gunajit.0 <span class="ql-arr">→</span>
+        </a>
+        <a href="https://www.youtube.com/@gunajitkalita6667/videos" target="_blank" rel="noopener" class="ql">
+          <svg viewBox="0 0 24 24" fill="#FF0000"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          YouTube · Songs & Compositions <span class="ql-arr">→</span>
+        </a>
+        <a href="contact.html" class="ql">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Collaborations & Contact <span class="ql-arr">→</span>
+        </a>
       </div>
     </div>
   </div>
@@ -345,10 +358,8 @@
   <div class="sec-in">
     <div class="about-grid">
       <div class="avis fl" style="position:relative;">
-        <div class="abox" style="background:none;border:none;box-shadow:none;overflow:visible;">
-          <div style="border-radius:20px;overflow:hidden;width:100%;height:100%;box-shadow:0 16px 60px rgba(176,125,26,.20),0 0 0 1px rgba(176,125,26,.12);position:relative;">
-            <img src="photo2.jpeg" alt="Gunajit Kalita — Assamese lyricist portrait" style="width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(8%) contrast(1.04);" loading="lazy"/>
-          </div>
+        <div class="abox">
+          <img src="gunajit-1.jpg" alt="Gunajit Kalita — Assamese Lyricist and Poet from Bajali, Assam" class="abox-photo" loading="lazy">
         </div>
         <div class="afloat af1"><span class="afn">50+</span><span class="afl">Songs Written</span></div>
         <div class="afloat af2"><span class="afn">13+</span><span class="afl">Years Creating</span></div>
@@ -415,66 +426,7 @@
 
 <div class="divline"></div>
 
-<!-- PHOTO GALLERY -->
-<section class="sec sec-ink" id="gallery">
-  <div class="sec-in">
-    <span class="lbl">Behind the Words</span>
-    <h2 class="h2" style="margin-bottom:16px;">Faces of a <em>Creative Soul</em></h2>
-    <p class="desc" style="margin-bottom:48px;">The man behind the melodies — lyricist, poet, violinist and storyteller from Bajali, Assam.</p>
-
-    <!-- Masonry-style photo grid -->
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto;gap:16px;max-width:900px;">
-
-      <!-- Photo 3 — violin with color, tall left spanning 2 rows -->
-      <div style="grid-column:1;grid-row:1/3;border-radius:18px;overflow:hidden;box-shadow:0 12px 48px rgba(176,125,26,.18);position:relative;aspect-ratio:3/4;">
-        <img src="photo3.jpeg" alt="Gunajit Kalita playing violin" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'"/>
-        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(20,10,5,.55) 0%,transparent 50%);pointer-events:none;"></div>
-        <div style="position:absolute;bottom:18px;left:18px;right:18px;">
-          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:5px;">The Musician</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.4);">Strings carry the words when the voice falls silent</div>
-        </div>
-      </div>
-
-      <!-- Photo 2 — B&W portrait, top right -->
-      <div style="grid-column:2/4;grid-row:1;border-radius:18px;overflow:hidden;box-shadow:0 12px 48px rgba(0,0,0,.12);position:relative;aspect-ratio:16/9;">
-        <img src="photo2.jpeg" alt="Gunajit Kalita — portrait in black and white" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;transition:transform .5s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'"/>
-        <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(20,10,5,.3),transparent 60%);pointer-events:none;"></div>
-        <div style="position:absolute;top:18px;left:18px;">
-          <span style="background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:5px 14px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#fff;">@gunajit.0</span>
-        </div>
-      </div>
-
-      <!-- Photo 4 — B&W violin closeup, bottom middle -->
-      <div style="grid-column:2;grid-row:2;border-radius:18px;overflow:hidden;box-shadow:0 12px 48px rgba(0,0,0,.12);position:relative;aspect-ratio:1/1;">
-        <img src="photo4.jpeg" alt="Gunajit Kalita playing violin — close up" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'"/>
-        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(20,10,5,.45),transparent 55%);pointer-events:none;"></div>
-        <div style="position:absolute;bottom:14px;left:14px;right:14px;">
-          <div style="font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:rgba(255,255,255,.85);">Lost in every note</div>
-        </div>
-      </div>
-
-      <!-- Photo 1 — Fashion full-body, bottom right -->
-      <div style="grid-column:3;grid-row:2;border-radius:18px;overflow:hidden;box-shadow:0 12px 48px rgba(176,125,26,.14);position:relative;aspect-ratio:3/4;">
-        <img src="photo1.jpeg" alt="Gunajit Kalita — full portrait" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .5s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'"/>
-        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(20,10,5,.5),transparent 50%);pointer-events:none;"></div>
-        <div style="position:absolute;bottom:14px;left:14px;right:14px;">
-          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:4px;">Bajali, Assam</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:#fff;">Poet by soul</div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Caption strip -->
-    <div style="margin-top:32px;display:flex;align-items:center;gap:16px;max-width:900px;">
-      <div style="flex:1;height:1px;background:rgba(176,125,26,.15);"></div>
-      <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--txt3);white-space:nowrap;">সংগ্রামৰ আন এটি নাম জীৱন</p>
-      <div style="flex:1;height:1px;background:rgba(176,125,26,.15);"></div>
-    </div>
-  </div>
-</section>
-
-
+<!-- POEM FEATURE -->
 <section class="sec sec-deep" id="verse">
   <div class="sec-in">
     <span class="lbl">A Glimpse of His Verse</span>
@@ -528,6 +480,58 @@
     </div>
   </div>
 </section>
+<section class="sec sec-ink" id="gallery">
+  <div class="sec-in">
+    <span class="lbl">Through the Lens</span>
+    <h2 class="h2" style="margin-bottom:48px;">A Poet Behind the <em>Frame</em></h2>
+    <div class="photo-gallery">
+
+      <!-- Main tall photo: full-body studio shot -->
+      <div class="pgcard pg-main fu">
+        <img src="gunajit-1.jpg" alt="Gunajit Kalita full portrait — Assamese lyricist in denim jacket" loading="lazy">
+        <div class="pgcard-overlay"></div>
+        <div class="pgcard-label">
+          <strong>Gunajit Kalita</strong>
+          Lyricist · Poet · Composer
+        </div>
+      </div>
+
+      <!-- Top-right: B&W close-up -->
+      <div class="pgcard pg-sm fu">
+        <img src="gunajit-2.jpg" alt="Gunajit Kalita black and white portrait" loading="lazy" style="object-position:center center;">
+        <div class="pgcard-overlay"></div>
+        <div class="pgcard-label">
+          <strong>The Thinker</strong>
+          Words born in silence
+        </div>
+      </div>
+
+      <!-- Bottom-right top: violin colour -->
+      <div class="pgcard pg-sm fu">
+        <img src="gunajit-3.jpg" alt="Gunajit Kalita playing violin at a music event" loading="lazy" style="object-position:center 30%;">
+        <div class="pgcard-overlay"></div>
+        <div class="pgcard-label">
+          <strong>Music in Motion</strong>
+          Strings & Composition
+        </div>
+      </div>
+
+      <!-- Bottom-right bottom spans 2 cols under the two small ones -->
+      <div class="pgcard pg-sm fu pg-wide">
+        <img src="gunajit-4.jpg" alt="Gunajit Kalita lost in music playing violin, black and white" loading="lazy" style="object-position:center 25%;">
+        <div class="pgcard-overlay"></div>
+        <div class="pgcard-label">
+          <strong>সংগ্রামৰ আন এটি নাম জীৱন</strong>
+          Struggle has another name — that name is life
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divline"></div>
+
 <section class="sec sec-warm" id="links">
   <div class="sec-in">
     <span class="lbl">Find Me</span>
@@ -607,16 +611,8 @@
       <a href="https://www.instagram.com/gunajit.0/" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.youtube.com/@gunajitkalita6667/videos" target="_blank" rel="noopener">YouTube</a>
     </div>
-    <p class="fcopy">© 2025 Gunajit Kalita · Assamese Lyricist & Poet · kalitaagunajit@gmail.com · সংগ্রামৰ আন এটি নাম জীৱন</p>
-    <!-- Design credit -->
-    <div style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(176,125,26,.15);display:flex;align-items:center;justify-content:center;gap:10px;">
-      <div style="width:28px;height:1px;background:rgba(176,125,26,.3);"></div>
-      <p style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--txt3);">
-        Designed &amp; built with ♥ by
-        <span style="color:var(--acc);font-weight:600;letter-spacing:2px;">Himangshu</span>
-      </p>
-      <div style="width:28px;height:1px;background:rgba(176,125,26,.3);"></div>
-    </div>
+    <p class="fcopy">© 2026 Gunajit Kalita · Assamese Lyricist & Poet · kalitaagunajit@gmail.com · সংগ্রামৰ আন এটি নাম জীৱন</p>
+    <p class="fdesign">Designed by <a href="https://www.instagram.com/himangshu" target="_blank" rel="noopener">Himangshu</a></p>
   </div>
 </footer>
 
