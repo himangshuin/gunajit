@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location — tells Google exactly where to find your pages
-Sitemap: https://gunajitkalita.github.io/sitemap.xml
+Sitemap: https://himangshuin.github.io/gunajit/sitemap.xml
 
 # Crawl-delay (optional, gentle on servers)
 Crawl-delay: 10
